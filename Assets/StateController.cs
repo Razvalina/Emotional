@@ -10,13 +10,15 @@ public class StateController : MonoBehaviour
     private Dictionary<string, string> redirections = new Dictionary<string, string>()
     {
         {"none", "SplashScreen" },
-		{"SplashScreen", "SelectMenuScreen" },
+		{"SplashScreen", "LoadingScreen" },
+		//{"SplashScreen", "SelectMenuScreen" },
 		{"SelectMenuScreen", "ActionPhaseScreen" },
 		{"ActionPhaseScreen", "DeathScreen" }
 	};
     public string CurrentScreen = "none";
 
     private IScreen Screen = null;
+	private float ToNewScreen = 0.0f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -28,8 +30,9 @@ public class StateController : MonoBehaviour
 	public void OnHide(IScreen screen)
 	{
 		this.CurrentScreen = screen.getName();
-		screen = getScreen(this.CurrentScreen);
-		this.MoveToScreen(screen);
+		this.ToNewScreen = 1.0f;
+		this.Screen = null;
+		
 	}
 
 	private string ToScreen(string from)
@@ -81,6 +84,18 @@ public class StateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (this.ToNewScreen > 0.0f )
+		{
+			this.ToNewScreen -= Time.deltaTime;
+		}
+
+		if (this.ToNewScreen < 0.0f && this.Screen == null)
+		{
+			IScreen screen = getScreen(this.CurrentScreen);
+			this.MoveToScreen(screen);
+			this.ToNewScreen = 0.0f;
+		}
+
+
+	}
 }

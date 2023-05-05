@@ -60,7 +60,6 @@
   <ItemGroup>
     <Compile Include="Assets\MyControls.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\SCE_pad.cs" />
   </ItemGroup>
   <ItemGroup>

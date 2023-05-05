@@ -2,7 +2,7 @@
     "name": "MyControls",
     "maps": [
         {
-            "name": "Player1",
+            "name": "PlayerDD",
             "id": "91e34a32-1707-46c3-b312-e61635dc73d8",
             "actions": [
                 {
@@ -89,7 +89,7 @@
                     "path": "<DualShockGamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player1",
+                    "groups": "Controls",
                     "action": "LeftShoulder",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -100,7 +100,7 @@
                     "path": "<DualShockGamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player1",
+                    "groups": "Controls",
                     "action": "Skill2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -111,7 +111,7 @@
                     "path": "<DualShockGamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player1",
+                    "groups": "Controls",
                     "action": "Skill3",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -122,8 +122,92 @@
                     "path": "<DualShockGamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player1",
+                    "groups": "Controls",
                     "action": "Skill4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "PlayerBuff",
+            "id": "601ff3d8-6ca8-4745-a3b6-01a3a25caf79",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "f895cc90-d7a4-440b-9ac5-a1e3f8c46b42",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0299d4d1-de76-4d05-a0f5-f23133963961",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controls",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "MainMenu",
+            "id": "c4bab06e-20a1-45a5-8f96-581eab2c8cc7",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "e910ccf5-53b2-41a4-8b3f-4f30dae1a676",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f6bf9da2-d818-43ea-8094-8b7206d570d0",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controls",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Splash",
+            "id": "cf243a72-00b0-44f0-b336-e18288499168",
+            "actions": [
+                {
+                    "name": "TriClick",
+                    "type": "Button",
+                    "id": "3ce0281f-a32c-4ff8-b285-dd4a3814c885",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d13cdbb2-0ed6-4000-8c31-3b0723f3d3a2",
+                    "path": "<DualShockGamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -132,19 +216,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "Player1",
-            "bindingGroup": "Player1",
-            "devices": [
-                {
-                    "devicePath": "<DualSenseGampadiOS>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Player2",
-            "bindingGroup": "Player2",
+            "name": "Controls",
+            "bindingGroup": "Controls",
             "devices": [
                 {
                     "devicePath": "<DualSenseGampadiOS>",

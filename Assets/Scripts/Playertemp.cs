@@ -10,9 +10,91 @@ using Random = UnityEngine.Random;
 
 using DualshockAdaptive;
 using static DualshockAdaptive.SCE;
+using UnityEditorInternal;
 
-public class Player : MonoBehaviour
+public class PlayerOld: MonoBehaviour
 {
+	public int PlayerID = 0;
+
+	private static bool isInitedPS5 = false;
+
+	private int userId = SCE.SCE_USER_SERVICE_STATIC_USER_ID_1;
+	private int dualShotHandler = -1;
+	DualshockAdaptive.SCE.ScePadTriggerEffectParam addaptiveTrigger;
+
+	// Start is called before the first frame update
+	void Start()
+	{
+		if (!isInitedPS5)
+		{
+			isInitedPS5 = true;
+		}
+
+		int ret = SCE.scePadInit();
+		if (ret != 0)
+		{
+			Debug.Log("Can't init libScePad");
+			return;
+		}
+
+		this.dualShotHandler = SCE.scePadOpen(userId, 0, this.PlayerID, IntPtr.Zero);
+		if ((uint)this.dualShotHandler == SCE.SCE_PAD_ERROR_ALREADY_OPENED)
+		{
+			// need to get control
+			this.dualShotHandler = SCE.scePadGetHandle(userId, 0, this.PlayerID);
+			if ((uint)this.dualShotHandler == SCE.SCE_PAD_ERROR_NO_HANDLE)
+			{
+				Debug.Log("Controller is inited somewhere, but tool couldn't attach to it. \nDo something with contoller and restart tool");
+				return;
+			}
+		}
+
+
+		this.addaptiveTrigger = new SCE.ScePadTriggerEffectParam();
+		this.addaptiveTrigger.triggerMask = SCE.SCE_PAD_TRIGGER_EFFECT_TRIGGER_MASK_L2 | SCE.SCE_PAD_TRIGGER_EFFECT_TRIGGER_MASK_R2;
+		this.addaptiveTrigger.command = new SCE.ScePadTriggerEffectCommand[SCE.SCE_PAD_TRIGGER_EFFECT_TRIGGER_NUM];
+		this.addaptiveTrigger.padding = new byte[7];
+
+
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].padding = new byte[4];
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].mode = (int)SCE.ScePadTriggerEffectMode.SCE_PAD_TRIGGER_EFFECT_MODE_FEEDBACK;
+
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].commandData = new ScePadTriggerEffectCommandData();
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].commandData.feedbackParam.position = 3;
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].commandData.feedbackParam.strength = 7;
+
+
+
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].padding = new byte[4];
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].mode = (int)SCE.ScePadTriggerEffectMode.SCE_PAD_TRIGGER_EFFECT_MODE_FEEDBACK;
+
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].commandData = new ScePadTriggerEffectCommandData();
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].commandData.feedbackParam.position = 3;
+		this.addaptiveTrigger.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].commandData.feedbackParam.strength = 7;
+
+
+		ret = SCE.scePadSetTriggerEffect(this.dualShotHandler, ref this.addaptiveTrigger);
+		if (ret != 0)
+		{
+			Debug.Log("can't assign triggerEffect to Left");
+		}
+
+	}
+	void Awake()
+	{
+		DontDestroyOnLoad(transform.gameObject);
+	}
+
+	private void OnDestroy()
+	{
+		if (this.dualShotHandler != -1)
+		{
+			SCE.scePadClose(this.dualShotHandler);
+			this.dualShotHandler = -1;
+		}
+	}
+
+
 	//class FireLife
 	//{
 	//	public GameObject Go { get; set; }
@@ -125,54 +207,7 @@ public class Player : MonoBehaviour
 
 
 
-	//	int ret = SCE.scePadInit();
-	//	if (ret != 0)
-	//	{
-	//		Debug.Log("Can't init libScePad");
-	//		return;
-	//	}
 
-	//	this.dualShotHandler = SCE.scePadOpen(userId, 0, 0, IntPtr.Zero);
-	//	if ((uint)this.dualShotHandler == SCE.SCE_PAD_ERROR_ALREADY_OPENED)
-	//	{
-	//		// need to get control
-	//		this.dualShotHandler = SCE.scePadGetHandle(userId, 0, 0);
-	//		if ((uint)this.dualShotHandler == SCE.SCE_PAD_ERROR_NO_HANDLE)
-	//		{
-	//			Debug.Log("Controller is inited somewhere, but tool couldn't attach to it. \nDo something with contoller and restart tool");
-	//			return;
-	//		}
-	//	}
-
-
-	//	this.addaptive = new SCE.ScePadTriggerEffectParam();
-	//	this.addaptive.triggerMask = SCE.SCE_PAD_TRIGGER_EFFECT_TRIGGER_MASK_L2 | SCE.SCE_PAD_TRIGGER_EFFECT_TRIGGER_MASK_R2;
-	//	this.addaptive.command = new SCE.ScePadTriggerEffectCommand[SCE.SCE_PAD_TRIGGER_EFFECT_TRIGGER_NUM];
-	//	this.addaptive.padding = new byte[7];
-
-
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].padding = new byte[4];
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].mode = (int)SCE.ScePadTriggerEffectMode.SCE_PAD_TRIGGER_EFFECT_MODE_FEEDBACK;
-
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].commandData = new ScePadTriggerEffectCommandData();
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].commandData.feedbackParam.position = 3;
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_L2].commandData.feedbackParam.strength = 7;
-
-
-
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].padding = new byte[4];
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].mode = (int)SCE.ScePadTriggerEffectMode.SCE_PAD_TRIGGER_EFFECT_MODE_FEEDBACK;
-
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].commandData = new ScePadTriggerEffectCommandData();
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].commandData.feedbackParam.position = 3;
-	//	this.addaptive.command[SCE.SCE_PAD_TRIGGER_EFFECT_PARAM_INDEX_FOR_R2].commandData.feedbackParam.strength = 7;
-
-
-	//	ret = SCE.scePadSetTriggerEffect(this.dualShotHandler, ref this.addaptive);
-	//	if (ret != 0)
-	//	{
-	//		Debug.Log("can't assign triggerEffect to Left");
-	//	}
 
 
 	//}
@@ -186,15 +221,6 @@ public class Player : MonoBehaviour
 	//	//this.TriggerFire();
 	//}
 
-	//private void OnDestroy()
-	//{   
-	//	if (this.dualShotHandler != -1)
-	//	{
-	//		SCE.scePadClose(this.dualShotHandler);
-	//		this.dualShotHandler = -1;
-	//	}
-		
-	//}
 
 	//// Update is called once per frame
 	//void Update()

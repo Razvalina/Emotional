@@ -20,6 +20,7 @@ namespace DualshockAdaptive
 
 
 		public const Byte SCE_USER_SERVICE_STATIC_USER_ID_1 = 1;
+		public const Byte SCE_USER_SERVICE_STATIC_USER_ID_2 = 2;
 
 		public const Byte SCE_PAD_TRIGGER_EFFECT_TRIGGER_MASK_L2 = 0x01;
 		public const Byte SCE_PAD_TRIGGER_EFFECT_TRIGGER_MASK_R2 = 0x02;

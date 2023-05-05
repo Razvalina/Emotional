@@ -24,11 +24,11 @@ public partial class @MyControls: IInputActionCollection2, IDisposable
     ""name"": ""MyControls"",
     ""maps"": [
         {
-            ""name"": ""Player"",
+            ""name"": ""Player1"",
             ""id"": ""91e34a32-1707-46c3-b312-e61635dc73d8"",
             ""actions"": [
                 {
-                    ""name"": ""Fire"",
+                    ""name"": ""Skill1"",
                     ""type"": ""Button"",
                     ""id"": ""60dafc0a-7ae4-4ce7-927c-27af1ff90fc5"",
                     ""expectedControlType"": ""Button"",
@@ -37,9 +37,45 @@ public partial class @MyControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""FireShoulder"",
+                    ""name"": ""Skill2"",
+                    ""type"": ""Button"",
+                    ""id"": ""2cfbfbe9-2849-4eeb-9c82-674114e28cf1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill3"",
+                    ""type"": ""Button"",
+                    ""id"": ""ac09a57b-24fb-41d7-a451-ae04d44649aa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill4"",
+                    ""type"": ""Button"",
+                    ""id"": ""6eb0ad7b-294e-45c7-b089-ca8fa883f172"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RightShoulder"",
                     ""type"": ""Value"",
                     ""id"": ""8b9ece33-0b34-486f-a8eb-9192a50146b6"",
+                    ""expectedControlType"": ""Double"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""LeftShoulder"",
+                    ""type"": ""Value"",
+                    ""id"": ""8a139e11-fb2f-4436-8da2-38d91f84e464"",
                     ""expectedControlType"": ""Double"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -54,7 +90,7 @@ public partial class @MyControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Fire"",
+                    ""action"": ""Skill1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -65,7 +101,51 @@ public partial class @MyControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""FireShoulder"",
+                    ""action"": ""RightShoulder"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3309bec0-5fc3-40ec-bb50-d389e804022d"",
+                    ""path"": ""<DualShockGamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player1"",
+                    ""action"": ""LeftShoulder"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""81602fa5-6046-42ad-8cb2-04a93a61c310"",
+                    ""path"": ""<DualShockGamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player1"",
+                    ""action"": ""Skill2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c69cf71-483d-4df6-a29a-4cb0f545c44c"",
+                    ""path"": ""<DualShockGamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player1"",
+                    ""action"": ""Skill3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e7154d0-6da5-4714-81eb-a84a89405268"",
+                    ""path"": ""<DualShockGamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player1"",
+                    ""action"": ""Skill4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -74,16 +154,37 @@ public partial class @MyControls: IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""ActionPhase"",
-            ""bindingGroup"": ""ActionPhase"",
-            ""devices"": []
+            ""name"": ""Player1"",
+            ""bindingGroup"": ""Player1"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<DualSenseGampadiOS>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player2"",
+            ""bindingGroup"": ""Player2"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<DualSenseGampadiOS>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-        m_Player_FireShoulder = m_Player.FindAction("FireShoulder", throwIfNotFound: true);
+        // Player1
+        m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
+        m_Player1_Skill1 = m_Player1.FindAction("Skill1", throwIfNotFound: true);
+        m_Player1_Skill2 = m_Player1.FindAction("Skill2", throwIfNotFound: true);
+        m_Player1_Skill3 = m_Player1.FindAction("Skill3", throwIfNotFound: true);
+        m_Player1_Skill4 = m_Player1.FindAction("Skill4", throwIfNotFound: true);
+        m_Player1_RightShoulder = m_Player1.FindAction("RightShoulder", throwIfNotFound: true);
+        m_Player1_LeftShoulder = m_Player1.FindAction("LeftShoulder", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -142,71 +243,116 @@ public partial class @MyControls: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Player
-    private readonly InputActionMap m_Player;
-    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Fire;
-    private readonly InputAction m_Player_FireShoulder;
-    public struct PlayerActions
+    // Player1
+    private readonly InputActionMap m_Player1;
+    private List<IPlayer1Actions> m_Player1ActionsCallbackInterfaces = new List<IPlayer1Actions>();
+    private readonly InputAction m_Player1_Skill1;
+    private readonly InputAction m_Player1_Skill2;
+    private readonly InputAction m_Player1_Skill3;
+    private readonly InputAction m_Player1_Skill4;
+    private readonly InputAction m_Player1_RightShoulder;
+    private readonly InputAction m_Player1_LeftShoulder;
+    public struct Player1Actions
     {
         private @MyControls m_Wrapper;
-        public PlayerActions(@MyControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Fire => m_Wrapper.m_Player_Fire;
-        public InputAction @FireShoulder => m_Wrapper.m_Player_FireShoulder;
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public Player1Actions(@MyControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Skill1 => m_Wrapper.m_Player1_Skill1;
+        public InputAction @Skill2 => m_Wrapper.m_Player1_Skill2;
+        public InputAction @Skill3 => m_Wrapper.m_Player1_Skill3;
+        public InputAction @Skill4 => m_Wrapper.m_Player1_Skill4;
+        public InputAction @RightShoulder => m_Wrapper.m_Player1_RightShoulder;
+        public InputAction @LeftShoulder => m_Wrapper.m_Player1_LeftShoulder;
+        public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
-        public void AddCallbacks(IPlayerActions instance)
+        public static implicit operator InputActionMap(Player1Actions set) { return set.Get(); }
+        public void AddCallbacks(IPlayer1Actions instance)
         {
-            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Fire.started += instance.OnFire;
-            @Fire.performed += instance.OnFire;
-            @Fire.canceled += instance.OnFire;
-            @FireShoulder.started += instance.OnFireShoulder;
-            @FireShoulder.performed += instance.OnFireShoulder;
-            @FireShoulder.canceled += instance.OnFireShoulder;
+            if (instance == null || m_Wrapper.m_Player1ActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Player1ActionsCallbackInterfaces.Add(instance);
+            @Skill1.started += instance.OnSkill1;
+            @Skill1.performed += instance.OnSkill1;
+            @Skill1.canceled += instance.OnSkill1;
+            @Skill2.started += instance.OnSkill2;
+            @Skill2.performed += instance.OnSkill2;
+            @Skill2.canceled += instance.OnSkill2;
+            @Skill3.started += instance.OnSkill3;
+            @Skill3.performed += instance.OnSkill3;
+            @Skill3.canceled += instance.OnSkill3;
+            @Skill4.started += instance.OnSkill4;
+            @Skill4.performed += instance.OnSkill4;
+            @Skill4.canceled += instance.OnSkill4;
+            @RightShoulder.started += instance.OnRightShoulder;
+            @RightShoulder.performed += instance.OnRightShoulder;
+            @RightShoulder.canceled += instance.OnRightShoulder;
+            @LeftShoulder.started += instance.OnLeftShoulder;
+            @LeftShoulder.performed += instance.OnLeftShoulder;
+            @LeftShoulder.canceled += instance.OnLeftShoulder;
         }
 
-        private void UnregisterCallbacks(IPlayerActions instance)
+        private void UnregisterCallbacks(IPlayer1Actions instance)
         {
-            @Fire.started -= instance.OnFire;
-            @Fire.performed -= instance.OnFire;
-            @Fire.canceled -= instance.OnFire;
-            @FireShoulder.started -= instance.OnFireShoulder;
-            @FireShoulder.performed -= instance.OnFireShoulder;
-            @FireShoulder.canceled -= instance.OnFireShoulder;
+            @Skill1.started -= instance.OnSkill1;
+            @Skill1.performed -= instance.OnSkill1;
+            @Skill1.canceled -= instance.OnSkill1;
+            @Skill2.started -= instance.OnSkill2;
+            @Skill2.performed -= instance.OnSkill2;
+            @Skill2.canceled -= instance.OnSkill2;
+            @Skill3.started -= instance.OnSkill3;
+            @Skill3.performed -= instance.OnSkill3;
+            @Skill3.canceled -= instance.OnSkill3;
+            @Skill4.started -= instance.OnSkill4;
+            @Skill4.performed -= instance.OnSkill4;
+            @Skill4.canceled -= instance.OnSkill4;
+            @RightShoulder.started -= instance.OnRightShoulder;
+            @RightShoulder.performed -= instance.OnRightShoulder;
+            @RightShoulder.canceled -= instance.OnRightShoulder;
+            @LeftShoulder.started -= instance.OnLeftShoulder;
+            @LeftShoulder.performed -= instance.OnLeftShoulder;
+            @LeftShoulder.canceled -= instance.OnLeftShoulder;
         }
 
-        public void RemoveCallbacks(IPlayerActions instance)
+        public void RemoveCallbacks(IPlayer1Actions instance)
         {
-            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_Player1ActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IPlayerActions instance)
+        public void SetCallbacks(IPlayer1Actions instance)
         {
-            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_Player1ActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_Player1ActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public PlayerActions @Player => new PlayerActions(this);
-    private int m_ActionPhaseSchemeIndex = -1;
-    public InputControlScheme ActionPhaseScheme
+    public Player1Actions @Player1 => new Player1Actions(this);
+    private int m_Player1SchemeIndex = -1;
+    public InputControlScheme Player1Scheme
     {
         get
         {
-            if (m_ActionPhaseSchemeIndex == -1) m_ActionPhaseSchemeIndex = asset.FindControlSchemeIndex("ActionPhase");
-            return asset.controlSchemes[m_ActionPhaseSchemeIndex];
+            if (m_Player1SchemeIndex == -1) m_Player1SchemeIndex = asset.FindControlSchemeIndex("Player1");
+            return asset.controlSchemes[m_Player1SchemeIndex];
         }
     }
-    public interface IPlayerActions
+    private int m_Player2SchemeIndex = -1;
+    public InputControlScheme Player2Scheme
     {
-        void OnFire(InputAction.CallbackContext context);
-        void OnFireShoulder(InputAction.CallbackContext context);
+        get
+        {
+            if (m_Player2SchemeIndex == -1) m_Player2SchemeIndex = asset.FindControlSchemeIndex("Player2");
+            return asset.controlSchemes[m_Player2SchemeIndex];
+        }
+    }
+    public interface IPlayer1Actions
+    {
+        void OnSkill1(InputAction.CallbackContext context);
+        void OnSkill2(InputAction.CallbackContext context);
+        void OnSkill3(InputAction.CallbackContext context);
+        void OnSkill4(InputAction.CallbackContext context);
+        void OnRightShoulder(InputAction.CallbackContext context);
+        void OnLeftShoulder(InputAction.CallbackContext context);
     }
 }

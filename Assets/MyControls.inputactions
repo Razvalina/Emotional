@@ -2,11 +2,11 @@
     "name": "MyControls",
     "maps": [
         {
-            "name": "Player",
+            "name": "Player1",
             "id": "91e34a32-1707-46c3-b312-e61635dc73d8",
             "actions": [
                 {
-                    "name": "Fire",
+                    "name": "Skill1",
                     "type": "Button",
                     "id": "60dafc0a-7ae4-4ce7-927c-27af1ff90fc5",
                     "expectedControlType": "Button",
@@ -15,9 +15,45 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "FireShoulder",
+                    "name": "Skill2",
+                    "type": "Button",
+                    "id": "2cfbfbe9-2849-4eeb-9c82-674114e28cf1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skill3",
+                    "type": "Button",
+                    "id": "ac09a57b-24fb-41d7-a451-ae04d44649aa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skill4",
+                    "type": "Button",
+                    "id": "6eb0ad7b-294e-45c7-b089-ca8fa883f172",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightShoulder",
                     "type": "Value",
                     "id": "8b9ece33-0b34-486f-a8eb-9192a50146b6",
+                    "expectedControlType": "Double",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftShoulder",
+                    "type": "Value",
+                    "id": "8a139e11-fb2f-4436-8da2-38d91f84e464",
                     "expectedControlType": "Double",
                     "processors": "",
                     "interactions": "",
@@ -32,7 +68,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fire",
+                    "action": "Skill1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -43,7 +79,51 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "FireShoulder",
+                    "action": "RightShoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3309bec0-5fc3-40ec-bb50-d389e804022d",
+                    "path": "<DualShockGamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1",
+                    "action": "LeftShoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81602fa5-6046-42ad-8cb2-04a93a61c310",
+                    "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1",
+                    "action": "Skill2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3c69cf71-483d-4df6-a29a-4cb0f545c44c",
+                    "path": "<DualShockGamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1",
+                    "action": "Skill3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e7154d0-6da5-4714-81eb-a84a89405268",
+                    "path": "<DualShockGamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1",
+                    "action": "Skill4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -52,9 +132,26 @@
     ],
     "controlSchemes": [
         {
-            "name": "ActionPhase",
-            "bindingGroup": "ActionPhase",
-            "devices": []
+            "name": "Player1",
+            "bindingGroup": "Player1",
+            "devices": [
+                {
+                    "devicePath": "<DualSenseGampadiOS>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "bindingGroup": "Player2",
+            "devices": [
+                {
+                    "devicePath": "<DualSenseGampadiOS>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }

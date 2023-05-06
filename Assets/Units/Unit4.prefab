@@ -58,6 +58,35 @@ MonoBehaviour:
       Power: 0
       DirectionKoef: 0
   Skills: []
+  ActiveSkill:
+    Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0
+        Power: 0
+        DirectionKoef: 1
+    Visual: {fileID: 0}
+    CountDown: 0
+    LifeTime: 0
+    Power: 1
+    Speed: 1
+    RemainCountDown: 0
+  UltSkill:
+    Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0
+        Power: 0
+        DirectionKoef: 1
+    Visual: {fileID: 0}
+    CountDown: 0
+    LifeTime: 0
+    Power: 1
+    Speed: 1
+    RemainCountDown: 0
+  isDamageDriver: 0
 --- !u!1 &4741386358098598076
 GameObject:
   m_ObjectHideFlags: 0

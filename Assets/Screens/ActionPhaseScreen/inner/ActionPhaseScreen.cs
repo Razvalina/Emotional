@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public partial class ActionPhaseScreen : MonoBehaviour, IScreen, PlayerActionDelegate
 {
@@ -15,7 +16,7 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen, PlayerActionDel
 	public GameObject P1;
 	public GameObject P2;
 
-	float fTimeWave = 5.0f;
+	float fTimeWave = 5000.0f;
 	//List<float> Waves = new List<float>();
 
 	// Update is called once per frame
@@ -54,7 +55,29 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen, PlayerActionDel
 
 	public void onFire(Player pl, Skill skill)
 	{
-		throw new System.NotImplementedException();
+		if (skill == null || skill.Visual == null)
+			return;
+
+		float fpower = skill.Use();
+		if (fpower < 0.0f)
+		{
+			// blocked
+			return;
+		}
+		GameObject g = Instantiate(skill.Visual, pl.UnitGo.transform.localPosition, Quaternion.identity);
+		if (g != null)
+		{
+			bullet_fly u = g.GetComponent<bullet_fly>();
+			if (u != null)
+			{
+				u.skill = skill;
+				u.player = pl;
+				u.unit = pl.Unit;
+				u.Power = fpower;
+				u.Init();
+			}
+		}
+
 	}
 
 	public void onUlt(Player pl, Skill skill)
@@ -77,6 +100,9 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen, PlayerActionDel
 		this.player2 = this.Player2.GetComponent<Player>();
 		this.player1.SetAdaptiveType(this.player1.Unit.isDamageDriver);
 		this.player2.SetAdaptiveType(this.player2.Unit.isDamageDriver);
+
+		this.player1.Delegate = this;
+		this.player2.Delegate = this;
 
 	}
 	public void ToHide()

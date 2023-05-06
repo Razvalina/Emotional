@@ -1,0 +1,2248 @@
+fileFormatVersion: 2
+guid: eb9bc316af206d34198794b1bf723a85
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: girls_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3038
+        width: 128
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd321e8fc6d66944aee62eb2a7a39d3
+      internalID: 1590501932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 3038
+        width: 128
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5a270900a671e45908e6fdc67eca70
+      internalID: -737215294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 3038
+        width: 129
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c81bf249bee7f0469d87a05f5a2c9aa
+      internalID: 1922160400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_3
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 3038
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af49b39bb70bb749a8fe1de706292ec
+      internalID: -328215649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_4
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 3038
+        width: 133
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961def2caa604d0408964ce23aba3fd3
+      internalID: 998562292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_5
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 3037
+        width: 134
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b08f7127e73a5469b6750b555b3ff5
+      internalID: -254961478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_6
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 3036
+        width: 137
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2eadba4f92e72428b545da4ac37bb6
+      internalID: 1153658063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_7
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 3036
+        width: 136
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27415dc80aa74ee41a659c8daf282f89
+      internalID: 1246922909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_8
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 3036
+        width: 137
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f19f2b984eb6fd4aafb78e51a5e7470
+      internalID: 1531999334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_9
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 3037
+        width: 133
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad62485214e23d41bd3f95814cd0970
+      internalID: -327688966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_10
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 3037
+        width: 131
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc07bc82a3fb30b47801fc5f80a37a5d
+      internalID: 1401636856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_11
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 3036
+        width: 132
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7b4cb6b58efbb4d9ddfa5ffb57017e
+      internalID: 300179402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_12
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 3037
+        width: 126
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bc098b5ef2ae746996de9bb6090079
+      internalID: 2013978188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_13
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 3037
+        width: 126
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcebdd9221bd47449b811fdff62a4fd5
+      internalID: 913197935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_14
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 3036
+        width: 127
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eb9103a9c9cac43a84b9a26daf1a4e
+      internalID: 1292898686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2537
+        width: 131
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028e074f59539bb4ea4f976a35d67fbe
+      internalID: 948757952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_16
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2537
+        width: 132
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cff959991660d448afa2dab03e20af1
+      internalID: 2140142132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_17
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 2537
+        width: 131
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c317eea4e79e7640b3ebf70b530b7be
+      internalID: -655289925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_18
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 2537
+        width: 139
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98506ac25d134f64d8e166ab2ea54268
+      internalID: 618097835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_19
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 2537
+        width: 137
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63a926c9a7eb7e4ab0b031a6e9cc4df
+      internalID: 170288777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_20
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 2537
+        width: 137
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a174152bd8119468783ef3dfeeb325
+      internalID: 2026074480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_21
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2537
+        width: 131
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4e414ab62515346a3a0469f8e94ed4
+      internalID: -1117177731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_22
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 2537
+        width: 131
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e002b75f5d858a44bb0dc977fd61391
+      internalID: -1662860500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_23
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 2537
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551d0c11521833841979a6d0ed5a3772
+      internalID: 2142195247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_24
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 2538
+        width: 128
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6067ded423692574a9926480219c2cbd
+      internalID: 637773516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_25
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 2538
+        width: 129
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a63f62a4c0a61429c0c6790935c40e
+      internalID: 1760551143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_26
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 2538
+        width: 128
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881c54a812c93414eb3a28d5f9697308
+      internalID: 333446288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_27
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 2537
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390aa335e22f966489dfd24488129201
+      internalID: -1196851855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_28
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 2537
+        width: 134
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60925878a41bbf4db8f5f2a41c195c9
+      internalID: 189413963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_29
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 2537
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9466f0777b7e62e499eb0e83e3d96f9b
+      internalID: -1213019495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2036
+        width: 137
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bda68ec8dc7d04aa214b9eb4673db2
+      internalID: -1780912774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_31
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 2036
+        width: 137
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d94d193663d7454786568fd43b73190
+      internalID: 1497198572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_32
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 2036
+        width: 137
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbc3bdec74740f438c7204f3ff9e86f
+      internalID: -1537494195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_33
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2036
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1478db5a3f85155469377f4f00a6b05b
+      internalID: 2094641904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_34
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 2036
+        width: 132
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8baec922965c157419aadd4cecd9d27b
+      internalID: 779505586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_35
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 2036
+        width: 132
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c863ce03053d7c741bcb19c88398c1d3
+      internalID: -228986063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_36
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 2036
+        width: 127
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7173ed1bf397497478f491c7ac8fe338
+      internalID: -1635700883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_37
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 2036
+        width: 127
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9e154b2ebd24f40b4088a5cc4b26c8
+      internalID: -590274782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_38
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 2036
+        width: 126
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a8d22b21e7041498c91adf97d21017
+      internalID: -1604338348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_39
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 2036
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8716de1f868264f9f42c18af19e8e2
+      internalID: 902723592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_40
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 2036
+        width: 131
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6da91bec19a9244b9ce224215bc337
+      internalID: 580434681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_41
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 2036
+        width: 132
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde05cb05d468544bb63383f6e336f6a
+      internalID: 238914173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_42
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 2036
+        width: 138
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61fa53f1c4b20a41a3b718e9a03b934
+      internalID: -905464697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_43
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 2036
+        width: 137
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25ae37c50efe0b4798d0d2d52f31c0e
+      internalID: 657669184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_44
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 2036
+        width: 135
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23e9accb5f72a64ca774509ead77fef
+      internalID: -214485157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1537
+        width: 132
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031933704c0e7e04ebf70f1c1f9f3e34
+      internalID: 192228899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_46
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1537
+        width: 132
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470174951ce213b4db320cfce3a5630f
+      internalID: 135419922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_47
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1537
+        width: 134
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6510b11fe85c043ad7de87862f472a
+      internalID: -554006743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_48
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1537
+        width: 128
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311a86cd194cdf54b8131346f7d7069c
+      internalID: 164402462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_49
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1537
+        width: 129
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebef14a31b19d184e9d9b8d7b743806c
+      internalID: -1795364022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_50
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1537
+        width: 128
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd109133a70731469a8600934b17108
+      internalID: -1684558029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_51
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1537
+        width: 131
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35587b8f20637b4588f22f0d62ad9f1
+      internalID: -2089808968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_52
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1537
+        width: 131
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b6a4cdf67f06e41b8642d0760a7658
+      internalID: 564496087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_53
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 1537
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bf02473246a484792f20ebee4d0384
+      internalID: -1431015988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_54
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 1537
+        width: 136
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a26d6af1f7222844a49cf097068fa9d
+      internalID: -581745782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_55
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1537
+        width: 135
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a177335d8d2d3b4ba219b2768ec0f74
+      internalID: -1595968772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_56
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1537
+        width: 136
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aaf2e42c1f523045848e2961f16db10
+      internalID: -1106992553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_57
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 1537
+        width: 131
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2b7026971a03c48b3cbad4ec6e37a3
+      internalID: 320207141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_58
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 1537
+        width: 130
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce87939064e84742bb269efb3eef77b
+      internalID: 1736393979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_59
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 1537
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a9818b740affe4c835adaa36c6be3d
+      internalID: -475377116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_60
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1037
+        width: 126
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd65733d961d20e4da2696e7b42bd2a8
+      internalID: -221455918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_61
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1037
+        width: 125
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d23af6c068cbd240b56a3c6cec91401
+      internalID: -1502923924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_62
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1037
+        width: 126
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3230d8a474ba89b4ab2c693417c8ccdd
+      internalID: 1213702147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_63
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1037
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa674962c9f714644a22f786fcd6b7ef
+      internalID: 538825813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_64
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 1037
+        width: 132
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1202c2570eead1344ab70a66cd7d49e6
+      internalID: 1735677877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_65
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1037
+        width: 132
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd5a223780375f4a8b6f71c1bfa6a30
+      internalID: -1370995607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_66
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1037
+        width: 137
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36924858a80e9164089f58d41ead3294
+      internalID: -1958770700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_67
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1037
+        width: 136
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ccb06d738889e43974a103a0fffb90
+      internalID: 980011039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_68
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 1037
+        width: 137
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e564e48cefeaa534b90b9fa2c717f9ad
+      internalID: -615473253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_69
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 1037
+        width: 131
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38afb70192100064aabf266311341182
+      internalID: -897663363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_70
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1037
+        width: 132
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fcd4cb1f2888648bfc25ef1551a533
+      internalID: 1610932137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_71
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1037
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8c91cc7537209459e242ee4588d595
+      internalID: 901585823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_72
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1038
+        width: 128
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26606b571a68f5a42b1c2ecd5b5a329a
+      internalID: -2003240708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_73
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 1038
+        width: 129
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b998f1108132d429c130c5dd85ab92
+      internalID: -2027056211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_74
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 1038
+        width: 129
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f92a91eb0248154abaadb234cd4165c
+      internalID: -1434817151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_75
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 537
+        width: 132
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11211208693f9374fb2c08bf3577ef4b
+      internalID: 1832681443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_76
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 537
+        width: 132
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fedd9115923934ea2622d42f376f18
+      internalID: -202961464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_77
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 537
+        width: 134
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa263847808c2f419b3dcd716d7fb91
+      internalID: -1617001516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_78
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 537
+        width: 139
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a09f05ff90c64940b745aaad7abb5bc
+      internalID: 526946679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_79
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 537
+        width: 137
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6d6f13c26bf3046a86c9a23f50db91
+      internalID: -1826381542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_80
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 537
+        width: 137
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435909a687c3c8d40a56c7c897c25eec
+      internalID: 176972901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_81
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 537
+        width: 132
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a8281524ee823458628f57dc9a6d21
+      internalID: -1661859127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_82
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 537
+        width: 132
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270434fadb36afc4b8f2b011c7b47fca
+      internalID: -1620128900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_83
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 537
+        width: 134
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6379ed14bd5d0ac4fbacd4c68269aafa
+      internalID: -626053714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_84
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 537
+        width: 128
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5159e0d144cfd49a4fa92cf1964fc4
+      internalID: 1618852280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_85
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 537
+        width: 127
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858a740756656cd44a47c73bd5002bd2
+      internalID: -2032400796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_86
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 537
+        width: 127
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33038aab8121b73408979e53486ff128
+      internalID: -581958173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_87
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 537
+        width: 131
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f413f1dfd7faf4d967e46589d519c4
+      internalID: -1938733902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_88
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 537
+        width: 130
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a43966dcbdf10049b9e037c2c2a1960
+      internalID: -958026248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_89
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 537
+        width: 132
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a493086a4b145468da5750057a899c
+      internalID: -1652936316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_90
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 37
+        width: 137
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4112a15004ce0448dc5716a381901c
+      internalID: 418240359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_91
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 37
+        width: 137
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ed9869118cde74992195d590df7ac1
+      internalID: 1450782107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_92
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 37
+        width: 137
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f5ff370e2ea6b428c6fdf87fb4274c
+      internalID: 2017427282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_93
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 37
+        width: 133
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cc9175577ce7f489e4fb4bc50dde18
+      internalID: 46433280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_94
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 37
+        width: 133
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b592dc956f6d0af4aaa36a1c1d11fca7
+      internalID: 202475426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girls_95
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 37
+        width: 134
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787c02141e70f164f910da9347af8547
+      internalID: -1865162755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      girls_0: 1590501932
+      girls_1: -737215294
+      girls_10: 1401636856
+      girls_11: 300179402
+      girls_12: 2013978188
+      girls_13: 913197935
+      girls_14: 1292898686
+      girls_15: 948757952
+      girls_16: 2140142132
+      girls_17: -655289925
+      girls_18: 618097835
+      girls_19: 170288777
+      girls_2: 1922160400
+      girls_20: 2026074480
+      girls_21: -1117177731
+      girls_22: -1662860500
+      girls_23: 2142195247
+      girls_24: 637773516
+      girls_25: 1760551143
+      girls_26: 333446288
+      girls_27: -1196851855
+      girls_28: 189413963
+      girls_29: -1213019495
+      girls_3: -328215649
+      girls_30: -1780912774
+      girls_31: 1497198572
+      girls_32: -1537494195
+      girls_33: 2094641904
+      girls_34: 779505586
+      girls_35: -228986063
+      girls_36: -1635700883
+      girls_37: -590274782
+      girls_38: -1604338348
+      girls_39: 902723592
+      girls_4: 998562292
+      girls_40: 580434681
+      girls_41: 238914173
+      girls_42: -905464697
+      girls_43: 657669184
+      girls_44: -214485157
+      girls_45: 192228899
+      girls_46: 135419922
+      girls_47: -554006743
+      girls_48: 164402462
+      girls_49: -1795364022
+      girls_5: -254961478
+      girls_50: -1684558029
+      girls_51: -2089808968
+      girls_52: 564496087
+      girls_53: -1431015988
+      girls_54: -581745782
+      girls_55: -1595968772
+      girls_56: -1106992553
+      girls_57: 320207141
+      girls_58: 1736393979
+      girls_59: -475377116
+      girls_6: 1153658063
+      girls_60: -221455918
+      girls_61: -1502923924
+      girls_62: 1213702147
+      girls_63: 538825813
+      girls_64: 1735677877
+      girls_65: -1370995607
+      girls_66: -1958770700
+      girls_67: 980011039
+      girls_68: -615473253
+      girls_69: -897663363
+      girls_7: 1246922909
+      girls_70: 1610932137
+      girls_71: 901585823
+      girls_72: -2003240708
+      girls_73: -2027056211
+      girls_74: -1434817151
+      girls_75: 1832681443
+      girls_76: -202961464
+      girls_77: -1617001516
+      girls_78: 526946679
+      girls_79: -1826381542
+      girls_8: 1531999334
+      girls_80: 176972901
+      girls_81: -1661859127
+      girls_82: -1620128900
+      girls_83: -626053714
+      girls_84: 1618852280
+      girls_85: -2032400796
+      girls_86: -581958173
+      girls_87: -1938733902
+      girls_88: -958026248
+      girls_89: -1652936316
+      girls_9: -327688966
+      girls_90: 418240359
+      girls_91: 1450782107
+      girls_92: 2017427282
+      girls_93: 46433280
+      girls_94: 202475426
+      girls_95: -1865162755
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 	public int activeSkill { get; private set; } = 0;
 	public Vector2 Direction { get; private set; } = Vector2.zero;
 	public Vector2 Offset { get; private set; } = Vector2.zero;
+	public float TimeSpanUlt = 10.0f;
+	public float AwaitTillUlt = 10.0f;
 
 
 	// Start is called before the first frame update
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
 	{
 		this.InitDSContoller();
 		this.localGamepad = Gamepad.all[this.PlayerID];
+
 	}
 
 
@@ -90,6 +93,21 @@ public class Player : MonoBehaviour
 
 		HandleButtons();
 
+		if (this.AwaitTillUlt >= 0.0f)
+		{
+			AwaitTillUlt -= Time.deltaTime;
+			if (AwaitTillUlt < 0.0f)
+				AwaitTillUlt = 0.0f;
+		}
+		if (this.localGamepad.rightStickButton.isPressed && this.localGamepad.rightStickButton.isPressed)
+		{
+			if (this.AwaitTillUlt <= 0.0f)
+			{
+				this.TriggerUlt();
+				this.AwaitTillUlt = this.TimeSpanUlt;
+			}
+		}
+
 	}
 
 
@@ -107,6 +125,11 @@ public class Player : MonoBehaviour
 	public void TriggerFire()
 	{
 		Debug.Log("projectile here!");
+	}
+
+	public void TriggerUlt()
+	{
+		Debug.Log("ULT!!!!! here!");
 	}
 
 

@@ -207,6 +207,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3655376175861689512, guid: dd1f965f481258f439e1aa9c9e00497b, type: 3}
   m_PrefabInstance: {fileID: 809310543}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &210701823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9213248700838642848, guid: 83da5237dedb47c4b83fa37a2d7c3dec, type: 3}
+  m_PrefabInstance: {fileID: 974709725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &686525201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -654,6 +659,7 @@ MonoBehaviour:
   - {fileID: 49590593}
   - {fileID: 1442079360}
   - {fileID: 686525202}
+  - {fileID: 210701823}
   CurrentScreen: SelectionScreen
 --- !u!1001 &1877256957323341971
 PrefabInstance:
@@ -710,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 3655376175861689512, guid: dd1f965f481258f439e1aa9c9e00497b, type: 3}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212131678675666565, guid: dd1f965f481258f439e1aa9c9e00497b, type: 3}
+      propertyPath: character.Modifiers.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

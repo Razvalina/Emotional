@@ -28,7 +28,9 @@ public class Player : MonoBehaviour
 	public float AwaitTillUlt = 10.0f;
 	
 	public GameObject UnitGo { get; private set; }
+	public GameObject UnitGoSpr { get; private set; }
 	public Unit Unit { get; private set; }
+	public PlayerActionDelegate Delegate = null;
 
 
 
@@ -38,14 +40,27 @@ public class Player : MonoBehaviour
 		this.InitDSContoller();
 		this.localGamepad = Gamepad.all[this.PlayerID];
 
+
 	}
 
 
-
-
-	// Update is called once per frame
-	void Update()
+	public void UpdatePlayer()
 	{
+		if (this.Unit.character.isDead)
+		{
+			return;
+		}
+
+		
+
+		// we have just dieL(
+		if (this.Unit.character.isDead)
+		{
+			// just dieded
+			this.Delegate?.onDie(this);
+			return;
+		}
+
 		// angle
 		this.Direction = this.localGamepad.rightStick.ReadValue();
 
@@ -60,15 +75,23 @@ public class Player : MonoBehaviour
 		{
 			// Add boost HERE
 			Debug.Log("BOOSTED!! " + this.fBoostCharge);
+
+			// add modificator for power
+			Modifier mod = new Modifier();
+			mod.Timer = 0.01f;
+			mod.Stat = new Stat();
+			mod.Stat.Power *= this.fBoostCharge;
+
 			this.fBoostCharge = 0.0f;
 		}
 
-		
+
 		this.fTriggerValue = this.localGamepad.rightTrigger.value;
 		if (!this.isShoot && this.fTriggerValue > 0.85f)
 		{
 			this.isShoot = true;
-			this.TriggerFire();
+			this.Delegate?.onFire(this, this.Unit.ActiveSkill);
+			this.fBoostCharge = 0.0f;
 		}
 		if (this.isShoot && this.fTriggerValue < 0.2f)
 		{
@@ -91,7 +114,7 @@ public class Player : MonoBehaviour
 		{
 			Offset = move * Radius * 0.05f;
 		}
-		
+
 
 		// switch weapons here
 
@@ -107,12 +130,40 @@ public class Player : MonoBehaviour
 		{
 			if (this.AwaitTillUlt <= 0.0f)
 			{
-				this.TriggerUlt();
+				this.Delegate?.onUlt(this, this.Unit.UltSkill);
 				this.AwaitTillUlt = this.TimeSpanUlt;
 			}
 		}
 
+
+
+		int activeSkill = this.activeSkill;
+		//switch (activeSkill)
+		//{
+		//	case 0:
+		//		go.GetComponent<SpriteRenderer>().color = Color.white;
+		//		break;
+		//	case 1:
+		//		go.GetComponent<SpriteRenderer>().color = Color.red;
+		//		break;
+		//	case 2:
+		//		go.GetComponent<SpriteRenderer>().color = Color.green;
+		//		break;
+		//	case 3:
+		//		go.GetComponent<SpriteRenderer>().color = Color.blue;
+		//		break;
+		//}
+
+		if (this.Offset.magnitude > 0.0f)
+		{
+			this.UnitGo.transform.localPosition += new Vector3(this.Offset.x, this.Offset.y, 0.0f) * this.Unit.character.Current.Speed;
+		}
+
+		float Angle = Mathf.Atan2(this.Direction.y, this.Direction.x) * Mathf.Rad2Deg;
+		bool isRight = (Angle >= -90.0f && Angle <= 90.0f);
+		this.UnitGoSpr.GetComponent<SpriteRenderer>().flipX = !isRight;
 	}
+
 
 	public void InitUnit(GameObject go)
 	{
@@ -120,6 +171,9 @@ public class Player : MonoBehaviour
 			Destroy(this.UnitGo);
 		this.UnitGo = go;
 		this.Unit = this.UnitGo.GetComponent<Unit>();
+		this.UnitGoSpr = this.UnitGo.transform.Find("unit").gameObject;
+
+		this.Unit.UpdateCharacter();
 	}
 
 	private void OnDestroy()
@@ -130,18 +184,6 @@ public class Player : MonoBehaviour
 			this.dualShotHandler = -1;
 		}
 	}
-
-
-	public void TriggerFire()
-	{
-		Debug.Log("projectile here!");
-	}
-
-	public void TriggerUlt()
-	{
-		Debug.Log("ULT!!!!! here!");
-	}
-
 
 
 	void HandleButtons()

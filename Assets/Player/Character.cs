@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
 using static DualshockAdaptive.SCE;
 
+
 [Serializable]
 public class Character
 {
@@ -14,6 +15,8 @@ public class Character
 	public List<Modifier> Modifiers;
 
 	public Stat Current = new Stat();
+
+	public bool isDead => this.Current?.HP <= 0;
 
 	public void Update()
 	{

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     public Character character;
-    public List<Skill> Skills;
+    public List<Skill> Skills = new List<Skill>();
     public Skill ActiveSkill =null;
 
     public Skill UltSkill;
@@ -26,6 +26,18 @@ public class Unit : MonoBehaviour
     public void UpdateCharacter()
     {
         this.character.Update();
+
+        foreach( Skill skill in this.Skills )
+        {
+            if (skill != null)
+            {
+				skill.Update();
+			}
+        }
+            
+
+        if (this.UltSkill != null)
+            this.UltSkill.Update();
 
     }
 

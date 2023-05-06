@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8640417902642965218}
   - component: {fileID: 5908716776581155624}
   - component: {fileID: 4422062559288658755}
+  - component: {fileID: 8954818670711267183}
+  - component: {fileID: 743185233422188223}
   m_Layer: 0
   m_Name: 2ndPoliceman
   m_TagString: Untagged
@@ -106,3 +108,89 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!68 &8954818670711267183
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108093899791481324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.54404473, y: -6.1112385}
+  - {x: -2.0689416, y: -6.273639}
+  - {x: -1.8538446, y: -4.977263}
+  - {x: -1.6805072, y: -4.0045815}
+  - {x: -2.6940908, y: -0.79891187}
+  - {x: -1.8679652, y: 0.5440329}
+  - {x: -0.6819701, y: 1.110482}
+  - {x: -1.5650151, y: 1.805773}
+  - {x: -2.0994534, y: 3.1864777}
+  - {x: -2.6132603, y: 4.817431}
+  - {x: -0.3323965, y: 6.0044837}
+  - {x: 1.706049, y: 6.1616874}
+  - {x: 2.7468657, y: 5.3457255}
+  - {x: 1.9658575, y: 1.617171}
+  - {x: 0.6326561, y: 0.65433264}
+  - {x: 0.60421085, y: -1.7226524}
+  - {x: 1.2537684, y: -3.5443835}
+  - {x: 1.0965295, y: -5.0620255}
+  - {x: 1.4293232, y: -5.75196}
+  - {x: 0.02760148, y: -5.853017}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!50 &743185233422188223
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108093899791481324}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

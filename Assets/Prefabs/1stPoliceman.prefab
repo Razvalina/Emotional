@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 911651723052018368}
   - component: {fileID: 8558368342370556264}
   - component: {fileID: 8267594780430803546}
+  - component: {fileID: 5968468281395534122}
+  - component: {fileID: 7604315939445248798}
   m_Layer: 0
   m_Name: 1stPoliceman
   m_TagString: Untagged
@@ -95,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 5334307887078304456}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29d14a4b6eb49554f830884c36d04903, type: 2}
+  m_Controller: {fileID: 9100000, guid: d5bd6820c46878142a6d2747dd004f9b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -106,3 +108,89 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &5968468281395534122
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5334307887078304456}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!68 &7604315939445248798
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5334307887078304456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.11436105, y: -6.111238}
+  - {x: -1.6207643, y: -6.1801333}
+  - {x: -1.4970884, y: -4.848208}
+  - {x: -1.8908644, y: -2.1076984}
+  - {x: -1.6084213, y: -0.25530577}
+  - {x: -0.45795345, y: 1.1118169}
+  - {x: -1.6875377, y: 2.835055}
+  - {x: -2.5562487, y: 4.2106514}
+  - {x: -1.8980951, y: 4.733521}
+  - {x: -0.27702904, y: 5.9852166}
+  - {x: 2.054439, y: 6.038188}
+  - {x: 2.7644162, y: 3.1035004}
+  - {x: 1.0570278, y: 0.7261591}
+  - {x: 0.5554919, y: -1.8912339}
+  - {x: 1.2718186, y: -3.5292492}
+  - {x: 1.2640767, y: -3.768722}
+  - {x: 1.0330815, y: -4.9367943}
+  - {x: 1.8898239, y: -5.2915397}
+  - {x: 1.922934, y: -5.8099484}
+  - {x: 0.27297187, y: -5.7239075}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

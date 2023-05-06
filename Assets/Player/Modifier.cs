@@ -9,7 +9,7 @@ using static DualshockAdaptive.SCE;
 public class Modifier
 {
 	public float Timer;
-	public Stat Stat;
+	public Stat Stat = new Stat();
 
 	public bool isActive => this.Timer > 0.0f;
 	public void Update()

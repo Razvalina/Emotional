@@ -18,17 +18,16 @@ public class Player : MonoBehaviour
 
 	bool isShoot = false;
 	float fTriggerValue = 0.0f;
-
 	float fBoostCharge = 0.0f;
 
-	public int activeSkill { get; private set; } = 0;
-	public Vector2 Direction { get; private set; } = Vector2.zero;
+	public Vector2 Direction { get; private set; } = new Vector2( 1.0f, 0.0f);
 	public Vector2 Offset { get; private set; } = Vector2.zero;
-	public float TimeSpanUlt = 10.0f;
-	public float AwaitTillUlt = 10.0f;
+
 	
 	public GameObject UnitGo { get; private set; }
+	public GameObject UnitGoSpr { get; private set; }
 	public Unit Unit { get; private set; }
+	public PlayerActionDelegate Delegate = null;
 
 
 
@@ -38,17 +37,38 @@ public class Player : MonoBehaviour
 		this.InitDSContoller();
 		this.localGamepad = Gamepad.all[this.PlayerID];
 
+
 	}
 
 
-
-
-	// Update is called once per frame
-	void Update()
+	public void UpdatePlayer()
 	{
-		// angle
-		this.Direction = this.localGamepad.rightStick.ReadValue();
+		if (this.Unit.character.isDead)
+		{
+			return;
+		}
 
+		
+		this.Unit.UpdateCharacter();
+
+		// we have just dieL(
+		if (this.Unit.character.isDead)
+		{
+			// just dieded
+			this.Delegate?.onDie(this);
+			return;
+		}
+
+		// rotate player
+		Vector2 dir = this.localGamepad.rightStick.ReadValue();
+		if (dir.magnitude > 0.1f)
+		{
+			this.Direction = dir;
+			float Angle = Mathf.Atan2(this.Direction.y, this.Direction.x) * Mathf.Rad2Deg;
+			bool isRight = (Angle >= -90.0f && Angle <= 90.0f);
+			this.UnitGoSpr.GetComponent<SpriteRenderer>().flipX = !isRight;
+		}
+		// listen to booster
 		float fLeftTriggerValue = this.localGamepad.leftTrigger.value;
 		if (fLeftTriggerValue > 0.2f)
 		{
@@ -60,22 +80,47 @@ public class Player : MonoBehaviour
 		{
 			// Add boost HERE
 			Debug.Log("BOOSTED!! " + this.fBoostCharge);
+
+			// add modificator for power
+			Modifier mod = new Modifier();
+			mod.Timer = 0.01f;
+			mod.Stat = new Stat();
+			mod.Stat.Power = (1.0f + this.fBoostCharge);
+			this.Unit.ActiveSkill.Boost = mod.Stat.Power;
+			this.Unit.ActiveSkill.Modifier = mod;
+			this.Delegate?.onFire(this, this.Unit.ActiveSkill);
+			this.Unit.ActiveSkill.Boost = 1.0f;
 			this.fBoostCharge = 0.0f;
 		}
 
-		
+		// lister to fire
 		this.fTriggerValue = this.localGamepad.rightTrigger.value;
-		if (!this.isShoot && this.fTriggerValue > 0.85f)
+		if (this.Unit.isDamageDriver && this.fTriggerValue > 0.85f)
 		{
-			this.isShoot = true;
-			this.TriggerFire();
+			this.Delegate?.onFire(this, this.Unit.ActiveSkill);
 		}
-		if (this.isShoot && this.fTriggerValue < 0.2f)
+		else
 		{
-			this.isShoot = false;
+			this.fTriggerValue = this.localGamepad.rightTrigger.value;
+			if (!this.isShoot && this.fTriggerValue > 0.85f)
+			{
+				this.isShoot = true;
+				this.Delegate?.onFire(this, this.Unit.ActiveSkill);
+				this.fBoostCharge = 0.0f;
+			}
+			if (this.isShoot && this.fTriggerValue < 0.2f)
+			{
+				this.isShoot = false;
+			}
 		}
 
+		//listen to ULT
+		if (this.localGamepad.rightStickButton.isPressed && this.localGamepad.rightStickButton.isPressed)
+		{
+			this.Delegate?.onUlt(this, this.Unit.UltSkill);
+		}
 
+		// MOVE
 
 		// do not move by default
 		this.Offset = Vector2.zero;
@@ -91,28 +136,18 @@ public class Player : MonoBehaviour
 		{
 			Offset = move * Radius * 0.05f;
 		}
+		if (this.Offset.magnitude > 0.0f)
+		{
+			this.UnitGo.transform.localPosition += new Vector3(this.Offset.x, this.Offset.y, 0.0f) * this.Unit.character.Current.Speed;
+		}
 		
 
-		// switch weapons here
 
+		// switch weapons here
 		HandleButtons();
 
-		if (this.AwaitTillUlt >= 0.0f)
-		{
-			AwaitTillUlt -= Time.deltaTime;
-			if (AwaitTillUlt < 0.0f)
-				AwaitTillUlt = 0.0f;
-		}
-		if (this.localGamepad.rightStickButton.isPressed && this.localGamepad.rightStickButton.isPressed)
-		{
-			if (this.AwaitTillUlt <= 0.0f)
-			{
-				this.TriggerUlt();
-				this.AwaitTillUlt = this.TimeSpanUlt;
-			}
-		}
-
 	}
+
 
 	public void InitUnit(GameObject go)
 	{
@@ -120,6 +155,18 @@ public class Player : MonoBehaviour
 			Destroy(this.UnitGo);
 		this.UnitGo = go;
 		this.Unit = this.UnitGo.GetComponent<Unit>();
+		this.UnitGoSpr = this.UnitGo.transform.Find("unit").gameObject;
+
+		this.Unit.UpdateCharacter();
+	}
+
+	public void TakeDamage()
+	{
+		// add damage mod
+		Modifier mo = new Modifier();
+		mo.Timer = 0.01f;
+		mo.Stat.HP -= 1.0f;
+		this.Unit.character.Modifiers.Add(mo);
 	}
 
 	private void OnDestroy()
@@ -132,35 +179,40 @@ public class Player : MonoBehaviour
 	}
 
 
-	public void TriggerFire()
-	{
-		Debug.Log("projectile here!");
-	}
-
-	public void TriggerUlt()
-	{
-		Debug.Log("ULT!!!!! here!");
-	}
-
-
 
 	void HandleButtons()
 	{
 		if (this.localGamepad.buttonSouth.wasReleasedThisFrame)
 		{
-			this.activeSkill = 0;
+			this.Unit.ActiveSkill = null;
+			if (this.Unit.Skills.Count > 0)
+			{
+				this.Unit.ActiveSkill = this.Unit.Skills[0];
+			}
 		}
 		if (this.localGamepad.buttonWest.wasReleasedThisFrame)
 		{
-			this.activeSkill = 1;
+			this.Unit.ActiveSkill = null;
+			if (this.Unit.Skills.Count > 1)
+			{
+				this.Unit.ActiveSkill = this.Unit.Skills[1];
+			}
 		}
 		if (this.localGamepad.buttonNorth.wasReleasedThisFrame)
 		{
-			this.activeSkill = 2;
+			this.Unit.ActiveSkill = null;
+			if (this.Unit.Skills.Count > 2)
+			{
+				this.Unit.ActiveSkill = this.Unit.Skills[2];
+			}
 		}
 		if (this.localGamepad.buttonEast.wasReleasedThisFrame)
 		{
-			this.activeSkill = 3;
+			this.Unit.ActiveSkill = null;
+			if (this.Unit.Skills.Count > 3)
+			{
+				this.Unit.ActiveSkill = this.Unit.Skills[3];
+			}
 		}
 	}
 

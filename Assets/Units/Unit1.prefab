@@ -57,7 +57,88 @@ MonoBehaviour:
       Speed: 0
       Power: 0
       DirectionKoef: 0
-  Skills: []
+  Skills:
+  - Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0.05
+        Power: 0
+        DirectionKoef: 0
+    Visual: {fileID: 664396696187289991, guid: 18128ab52d5addc43ae1d1eb00ae5662, type: 3}
+    CountDown: 0.1
+    LifeTime: 5
+    Power: 1
+    Speed: 0.1
+    RemainCountDown: 0
+  - Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0
+        Power: 0
+        DirectionKoef: 0
+    Visual: {fileID: 664396696187289991, guid: 18128ab52d5addc43ae1d1eb00ae5662, type: 3}
+    CountDown: 0.05
+    LifeTime: 0.6
+    Power: 1
+    Speed: 1
+    RemainCountDown: 0
+  - Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0
+        Power: 0
+        DirectionKoef: 0
+    Visual: {fileID: 664396696187289991, guid: 18128ab52d5addc43ae1d1eb00ae5662, type: 3}
+    CountDown: 0.02
+    LifeTime: 1
+    Power: 1
+    Speed: 1
+    RemainCountDown: 0
+  - Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0
+        Power: 0
+        DirectionKoef: 0
+    Visual: {fileID: 664396696187289991, guid: 18128ab52d5addc43ae1d1eb00ae5662, type: 3}
+    CountDown: 0.01
+    LifeTime: 0.5
+    Power: 1
+    Speed: 1
+    RemainCountDown: 0
+  ActiveSkill:
+    Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0
+        Power: 0
+        DirectionKoef: 1
+    Visual: {fileID: 0}
+    CountDown: 0
+    LifeTime: 0
+    Power: 1
+    Speed: 1
+    RemainCountDown: 0
+  UltSkill:
+    Modifier:
+      Timer: 0
+      Stat:
+        HP: 0
+        Speed: 0
+        Power: 0
+        DirectionKoef: 1
+    Visual: {fileID: 664396696187289991, guid: 18128ab52d5addc43ae1d1eb00ae5662, type: 3}
+    CountDown: 5
+    LifeTime: 3
+    Power: 2
+    Speed: 0.3
+    RemainCountDown: 0
+  isDamageDriver: 1
 --- !u!1 &6400800475646189504
 GameObject:
   m_ObjectHideFlags: 0

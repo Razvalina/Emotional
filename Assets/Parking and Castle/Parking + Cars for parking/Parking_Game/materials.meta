@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 171af97e15ccb4040aa087bc7673c178
+<<<<<<<< HEAD:Assets/Parking and Castle/Parking + Cars for parking/Parking_Game/materials.meta
+guid: a357a62185d9c7447af7de748bb36477
+========
+guid: 149d9e93129a1824f93e538d2babf2eb
+>>>>>>>> 7db0ba8210e99fa4b663b3a830dc56c2211beb4e:Assets/Animations/Twerking.meta
 folderAsset: yes
-timeCreated: 1489426031
-licenseType: Store
 DefaultImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

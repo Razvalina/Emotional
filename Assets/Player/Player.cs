@@ -67,6 +67,26 @@ public class Player : MonoBehaviour
 			float Angle = Mathf.Atan2(this.Direction.y, this.Direction.x) * Mathf.Rad2Deg;
 			bool isRight = (Angle >= -90.0f && Angle <= 90.0f);
 			this.UnitGoSpr.GetComponent<SpriteRenderer>().flipX = !isRight;
+
+			if (!this.Unit.isDamageDriver)
+			{
+				this.Unit.TargetGoTarget.transform.localPosition += new Vector3(this.Direction.x, this.Direction.y, 0.0f) * 0.25f;
+				if (this.Unit.TargetGoTarget.transform.localPosition.magnitude > this.Unit.ActiveSkill?.MaxRadiusTarget)
+				{
+
+
+					Vector3 normal = this.Unit.TargetGoTarget.transform.localPosition;
+					normal.Normalize();
+					normal *= this.Unit.ActiveSkill.MaxRadiusTarget;
+
+					this.Unit.TargetGoTarget.transform.localPosition = normal;
+				}
+
+
+
+				//// move by rad
+				//this.Unit.TargetGo.transform.localPosition += ra;
+			}
 		}
 		// listen to booster
 		float fLeftTriggerValue = this.localGamepad.leftTrigger.value;
@@ -157,6 +177,7 @@ public class Player : MonoBehaviour
 		this.Unit = this.UnitGo.GetComponent<Unit>();
 		this.UnitGoSpr = this.UnitGo.transform.Find("unit").gameObject;
 
+		
 		this.Unit.UpdateCharacter();
 	}
 

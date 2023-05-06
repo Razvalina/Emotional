@@ -16,6 +16,8 @@ public class Skill
 	public float LifeTime;
 	public float Power = 1.0f;
 	public float Boost = 1.0f;
+	public float RadiusTarget = 0.0f;
+	public float MaxRadiusTarget = 1.0f;
 
 	// projectiles only
 	public float Speed = 1.0f;

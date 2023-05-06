@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3rdPoliceman_run
       objectReference: {fileID: 0}
+    - target: {fileID: 4104163417146981967, guid: b90e1f3220c8f8a44946cde9bab3890e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -887,6 +891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Girl red
       objectReference: {fileID: 0}
+    - target: {fileID: 2386337892237600431, guid: 34cae0ec699173c49b5961d097648c34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -947,6 +955,10 @@ PrefabInstance:
     - target: {fileID: 8039582224179640785, guid: 5f39b313cb53086428f8b1984662e990, type: 3}
       propertyPath: m_Name
       value: Girl purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039582224179640785, guid: 5f39b313cb53086428f8b1984662e990, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1095,6 +1107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Girl pink
       objectReference: {fileID: 0}
+    - target: {fileID: 3891363989907840469, guid: 9e9caa4b1dc740b468e92b62cc9813f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6768563243746607688, guid: 9e9caa4b1dc740b468e92b62cc9813f8, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1199,6 +1215,10 @@ PrefabInstance:
     - target: {fileID: 9108093899791481324, guid: 4379add970053f147994230356c24df1, type: 3}
       propertyPath: m_Name
       value: 2ndPoliceman
+      objectReference: {fileID: 0}
+    - target: {fileID: 9108093899791481324, guid: 4379add970053f147994230356c24df1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -103,7 +103,6 @@
     <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
     <None Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
     <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
-    <None Include="Assets\Parking and Castle\Parking + Cars for parking\Parking_Game\Shaders\SpriteTileShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

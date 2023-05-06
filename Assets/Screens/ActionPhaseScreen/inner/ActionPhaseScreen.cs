@@ -103,6 +103,8 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen, PlayerActionDel
 
 		this.player1.Delegate = this;
 		this.player2.Delegate = this;
+		this.player1.Unit.onInit();
+		this.player2.Unit.onInit();
 
 	}
 	public void ToHide()

@@ -856,13 +856,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{02A2805C-584B-0994-36E9-54C58AAC3138}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{E7E47CF9-937A-ED60-3A89-59A1F3061254}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{02A2805C-584B-0994-36E9-54C58AAC3138}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRDemo.csproj">
       <Project>{9E4D1D2C-87D9-265B-CA3F-9662A9446204}</Project>

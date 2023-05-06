@@ -58,53 +58,25 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.17f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo.cs" />
     <Compile Include="Assets\Screens\Splash\inner\SplashScreen.cs" />
     <Compile Include="Assets\Skills\bullet_fly.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutodestructWhenNoChildren.cs" />
     <Compile Include="Assets\Player\PlayerAction.cs" />
     <Compile Include="Assets\Screens\LoadingScreen\inner\LoadingScreen.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_InspectorHelp.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Player\Skill.cs" />
     <Compile Include="Assets\Units\Unit.cs" />
     <Compile Include="Assets\Player\Stat.cs" />
     <Compile Include="Assets\Screens\SelectionScreen\inner\SelectionScreen.cs" />
     <Compile Include="Assets\Player\Modifier.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_ShurikenThreadFix.cs" />
     <Compile Include="Assets\Scripts\IScreen\IScreen.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\StateController.cs" />
     <Compile Include="Assets\Player\Character.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Player\Player.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Screens\ActionPhaseScreen\inner\ActionPhaseScreen.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Scripts\SCE_pad.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAB_Alpha8.shader" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
     <None Include="Assets\Sprites\2D-Police-Sprite\readme.txt" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\CartoonFX Readme.txt" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_PASSES.cginc" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster.txt" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
-    <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
+    <None Include="Assets\Parking and Castle\Parking + Cars for parking\Parking_Game\Shaders\SpriteTileShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -856,26 +828,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{02A2805C-584B-0994-36E9-54C58AAC3138}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{E7E47CF9-937A-ED60-3A89-59A1F3061254}</Project>
-      <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{9E4D1D2C-87D9-265B-CA3F-9662A9446204}</Project>
-      <Name>CFXRDemo</Name>
-    </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{1154B063-2ABC-A5C9-B879-87F41C739174}</Project>
-      <Name>KinoBloom.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXREditor.csproj">
-      <Project>{F35E3AAD-734D-3260-A4C7-C0BB4E59A508}</Project>
-      <Name>CFXREditor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

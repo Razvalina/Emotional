@@ -11,6 +11,7 @@ public class StateController : MonoBehaviour
     {
         {"none", "SplashScreen" },
 		{"SplashScreen", "LoadingScreen" },
+		{"LoadingScreen", "ActionPhaseScreen" },
 		//{"SplashScreen", "SelectMenuScreen" },
 		{"SelectMenuScreen", "ActionPhaseScreen" },
 		{"ActionPhaseScreen", "DeathScreen" }
@@ -18,7 +19,6 @@ public class StateController : MonoBehaviour
     public string CurrentScreen = "none";
 
     private IScreen Screen = null;
-	private float ToNewScreen = 0.0f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,10 +29,10 @@ public class StateController : MonoBehaviour
     }
 	public void OnHide(IScreen screen)
 	{
-		this.CurrentScreen = screen.getName();
-		this.ToNewScreen = 1.0f;
-		this.Screen = null;
-		
+		this.CurrentScreen = this.ToScreen(screen.getName());
+		screen = getScreen(this.CurrentScreen);
+		this.MoveToScreen(screen);
+
 	}
 
 	private string ToScreen(string from)
@@ -46,33 +46,26 @@ public class StateController : MonoBehaviour
     }
     private IScreen getScreen(string name)
     {
-		string toStreen = this.ToScreen(this.CurrentScreen);
 		foreach (GameObject go in GameScenes)
 		{
-			if (go.name.Contains(toStreen))
+			if (go.name.Contains(name))
 			{
 				IScreen sh = go.GetComponent<IScreen>();
 				return sh;
 			}
 		}
-		return null;
+
+		return this.getScreen("SplashScreen");
 	}
 
 	private void MoveToScreen(IScreen screen)
 	{
-		// stop controller in screen
-		if (this.Screen != null)
-		{
-			this.Screen.StopController();
-		}
-
 		this.Screen = screen;
-		
+
 		// activate new screen
 		if (this.Screen != null)
 		{
 			this.Screen.ToShow(this);
-			this.Screen.StartController();
 		}
 	}
 
@@ -84,18 +77,6 @@ public class StateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.ToNewScreen > 0.0f )
-		{
-			this.ToNewScreen -= Time.deltaTime;
-		}
-
-		if (this.ToNewScreen < 0.0f && this.Screen == null)
-		{
-			IScreen screen = getScreen(this.CurrentScreen);
-			this.MoveToScreen(screen);
-			this.ToNewScreen = 0.0f;
-		}
-
 
 	}
 }

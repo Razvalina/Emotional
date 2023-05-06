@@ -3,25 +3,34 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static DualshockAdaptive.SCE;
 
 public class Player : MonoBehaviour
 {
 	public int PlayerID = 0;
-	public MyControls Controller { get; private set; }
+	private Gamepad localGamepad = null;
 
 	// addaptive trigger data
 	private int userId => this.PlayerID + 1;// SCE.SCE_USER_SERVICE_STATIC_USER_ID_1;
 	private int dualShotHandler = -1;
 	DualshockAdaptive.SCE.ScePadTriggerEffectParam addaptiveTrigger;
-	
+
+	bool isShoot = false;
+	float fTriggerValue = 0.0f;
+
+	float fBoostCharge = 0.0f;
+
+	public int activeSkill { get; private set; } = 0;
+	public Vector2 Direction { get; private set; } = Vector2.zero;
+	public Vector2 Offset { get; private set; } = Vector2.zero;
+
 
 	// Start is called before the first frame update
 	void Awake()
 	{
 		this.InitDSContoller();
-		this.Controller = new MyControls();
-		
+		this.localGamepad = Gamepad.all[this.PlayerID];
 	}
 
 
@@ -29,11 +38,61 @@ public class Player : MonoBehaviour
 
 	// Update is called once per frame
 	void Update()
-    {
-        
-    }
+	{
+		// angle
+		this.Direction = this.localGamepad.rightStick.ReadValue();
 
-	
+		float fLeftTriggerValue = this.localGamepad.leftTrigger.value;
+		if (fLeftTriggerValue > 0.2f)
+		{
+			// start particles for changing here
+			this.fBoostCharge += Time.deltaTime * 0.5f;
+			return;
+		}
+		if (fLeftTriggerValue < 0.2f && this.fBoostCharge > 0.0f)
+		{
+			// Add boost HERE
+			Debug.Log("BOOSTED!! " + this.fBoostCharge);
+			this.fBoostCharge = 0.0f;
+		}
+
+		
+		this.fTriggerValue = this.localGamepad.rightTrigger.value;
+		if (!this.isShoot && this.fTriggerValue > 0.85f)
+		{
+			this.isShoot = true;
+			this.TriggerFire();
+		}
+		if (this.isShoot && this.fTriggerValue < 0.2f)
+		{
+			this.isShoot = false;
+		}
+
+
+
+		// do not move by default
+		this.Offset = Vector2.zero;
+
+		Vector2 move = this.localGamepad.leftStick.ReadValue();
+		float Radius = move.magnitude;
+		if (Radius < 0.2f)
+		{
+			// deadzone
+			Offset = Vector2.zero;
+		}
+		else
+		{
+			Offset = move * Radius * 0.05f;
+		}
+		
+
+		// switch weapons here
+
+		HandleButtons();
+
+	}
+
+
 
 	private void OnDestroy()
 	{
@@ -43,6 +102,35 @@ public class Player : MonoBehaviour
 			this.dualShotHandler = -1;
 		}
 	}
+
+
+	public void TriggerFire()
+	{
+		Debug.Log("projectile here!");
+	}
+
+
+
+	void HandleButtons()
+	{
+		if (this.localGamepad.buttonSouth.wasReleasedThisFrame)
+		{
+			this.activeSkill = 0;
+		}
+		if (this.localGamepad.buttonWest.wasReleasedThisFrame)
+		{
+			this.activeSkill = 1;
+		}
+		if (this.localGamepad.buttonNorth.wasReleasedThisFrame)
+		{
+			this.activeSkill = 2;
+		}
+		if (this.localGamepad.buttonEast.wasReleasedThisFrame)
+		{
+			this.activeSkill = 3;
+		}
+	}
+
 
 	public void SetAdaptiveType(bool isDD)
 	{

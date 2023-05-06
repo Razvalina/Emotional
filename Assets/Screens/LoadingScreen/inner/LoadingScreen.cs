@@ -11,11 +11,17 @@ public class LoadingScreen : MonoBehaviour, IScreen
 	private Player player1;
 	private Player player2;
 
+	public float timeLoading = 5.0f;
+
 
 	// Update is called once per frame
 	void Update()
 	{
-
+		if (this.timeLoading < 0.0f)
+		{
+			this.ToHide();
+		}
+		this.timeLoading -= Time.deltaTime;
 	}
 
 	// Start is called before the first frame update
@@ -29,41 +35,17 @@ public class LoadingScreen : MonoBehaviour, IScreen
 	}
 	public void ToHide()
 	{
-		this.gameObject.SetActive(false);
-		this.StateController.OnHide(this);
+		if (this.StateController != null)
+		{
+			this.gameObject.SetActive(false);
+			this.StateController.OnHide(this);
+		}
+		this.StateController = null;
 	}
 
-
-
-	// contorller callback for skipping
-	void OnTriClick()
-	{
-		this.ToHide();
-	}
 
 	public string getName()
 	{
 		return "LoadingScreen";
-	}
-
-	public void StartController()
-	{
-		this.player1.Controller.Splash.Enable();
-		this.player2.Controller.Splash.Enable();
-
-		this.player1.Controller.Splash.TriClick.started += context => OnTriClick();
-		this.player2.Controller.Splash.TriClick.started += context => OnTriClick();
-	}
-
-	public void StopController()
-	{
-		this.player1.Controller.Splash.TriClick.Reset();
-		this.player2.Controller.Splash.TriClick.Reset();
-
-		this.player1.Controller.Splash.TriClick.started += null;
-		this.player2.Controller.Splash.TriClick.started += null;
-
-		this.player1.Controller.Splash.Disable();
-		this.player2.Controller.Splash.Disable();
 	}
 }

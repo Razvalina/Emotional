@@ -1,21 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SplashScreen : MonoBehaviour, IScreen
 {
 	StateController StateController = null;
-	public GameObject Player1;
-	public GameObject Player2;
 
-	private Player player1;
-	private Player player2;
+	protected GameObject Planetext;
+	bool canProceed = false;
 
+	public void Start()
+	{
+		this.Planetext = this.transform.Find("mathafaka").gameObject;
+	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		if (Gamepad.all.Count != 2)
+		{
+			this.Planetext.GetComponent<Renderer>().enabled = true;
+			this.canProceed = false;
+		}
+		else
+		{
+			this.Planetext.GetComponent<Renderer>().enabled = false;
+			this.canProceed = true;
+		}
 
+		if (this.canProceed && Gamepad.all[1].buttonNorth.wasReleasedThisFrame || Gamepad.all[0].buttonNorth.wasReleasedThisFrame)
+		{
+			this.ToHide();
+		}
 	}
 
 	// Start is called before the first frame update
@@ -24,8 +41,6 @@ public class SplashScreen : MonoBehaviour, IScreen
 		this.StateController = st;
 		this.gameObject.SetActive(true);
 
-		this.player1 = this.Player1.GetComponent<Player>();
-		this.player2 = this.Player2.GetComponent<Player>();
 	}
 	public void ToHide()
 	{
@@ -33,34 +48,8 @@ public class SplashScreen : MonoBehaviour, IScreen
 		this.StateController.OnHide(this);
 	}
 
-
-
-	// contorller callback for skipping
-	void OnTriClick()
-	{
-		this.ToHide();
-	}
-
 	public string getName()
 	{
 		return "SplashScreen";
-	}
-
-	public void StartController()
-	{
-		this.player1.Controller.Splash.Enable();
-		this.player2.Controller.Splash.Enable();
-
-		this.player1.Controller.Splash.TriClick.started += context => OnTriClick();
-		this.player2.Controller.Splash.TriClick.started += context => OnTriClick();
-	}
-
-	public void StopController()
-	{
-		this.player1.Controller.Splash.TriClick.started += null;
-		this.player2.Controller.Splash.TriClick.started += null;
-
-		this.player1.Controller.Splash.Disable();
-		this.player2.Controller.Splash.Disable();
 	}
 }

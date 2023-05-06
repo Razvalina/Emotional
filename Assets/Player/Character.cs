@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using static DualshockAdaptive.SCE;
 
-public interface IScreen
+public class Character
 {
-	void ToShow(StateController st);
-	void ToHide();
-	string getName();
+	public Character()
+	{
+
+	}
+
 }

@@ -65,15 +65,15 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen
 		this.player1.SetAdaptiveType(true);
 		this.player2.SetAdaptiveType(false);
 
-		this.P1 = this.transform.Find("temp1").gameObject;
-		this.P2 = this.transform.Find("temp2").gameObject;
+		this.P1 = this.player1.UnitGo.transform.Find("unit").gameObject;
+		this.P2 = this.player2.UnitGo.transform.Find("unit").gameObject;
 	}
 	public void ToHide()
 	{
 		if (this.StateController != null)
 		{
 			this.gameObject.SetActive(false);
-			this.StateController.OnHide(this);
+			this.StateController.OnHide(this,"");
 		}
 		this.StateController = null;
 	}

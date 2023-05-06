@@ -11,10 +11,9 @@ public class StateController : MonoBehaviour
     {
         {"none", "SplashScreen" },
 		{"SplashScreen", "LoadingScreen" },
-		{"LoadingScreen", "ActionPhaseScreen" },
-		//{"SplashScreen", "SelectMenuScreen" },
-		{"SelectMenuScreen", "ActionPhaseScreen" },
-		{"ActionPhaseScreen", "DeathScreen" }
+		{"LoadingScreen", "SelectionScreen" },
+		{"ActionPhaseScreen", "DeathScreen" },
+		{"DeathScreen", "ActionPhaseScreen" }
 	};
     public string CurrentScreen = "none";
 
@@ -27,9 +26,14 @@ public class StateController : MonoBehaviour
 		IScreen screen = getScreen(this.CurrentScreen);
 		this.MoveToScreen(screen);
     }
-	public void OnHide(IScreen screen)
+
+	public void OnHide(IScreen screen, string go_to)
 	{
-		this.CurrentScreen = this.ToScreen(screen.getName());
+		if (go_to.Length != 0)
+			this.CurrentScreen = go_to;
+		else
+			this.CurrentScreen = this.ToScreen(screen.getName());
+
 		screen = getScreen(this.CurrentScreen);
 		this.MoveToScreen(screen);
 

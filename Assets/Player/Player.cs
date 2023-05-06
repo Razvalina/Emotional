@@ -9,7 +9,7 @@ using static DualshockAdaptive.SCE;
 public class Player : MonoBehaviour
 {
 	public int PlayerID = 0;
-	private Gamepad localGamepad = null;
+	public Gamepad localGamepad { get; private set; } = null;
 
 	// addaptive trigger data
 	private int userId => this.PlayerID + 1;// SCE.SCE_USER_SERVICE_STATIC_USER_ID_1;
@@ -24,6 +24,12 @@ public class Player : MonoBehaviour
 	public int activeSkill { get; private set; } = 0;
 	public Vector2 Direction { get; private set; } = Vector2.zero;
 	public Vector2 Offset { get; private set; } = Vector2.zero;
+	public float TimeSpanUlt = 10.0f;
+	public float AwaitTillUlt = 10.0f;
+	
+	public GameObject UnitGo { get; private set; }
+	public Unit Unit { get; private set; }
+
 
 
 	// Start is called before the first frame update
@@ -31,6 +37,7 @@ public class Player : MonoBehaviour
 	{
 		this.InitDSContoller();
 		this.localGamepad = Gamepad.all[this.PlayerID];
+
 	}
 
 
@@ -90,9 +97,30 @@ public class Player : MonoBehaviour
 
 		HandleButtons();
 
+		if (this.AwaitTillUlt >= 0.0f)
+		{
+			AwaitTillUlt -= Time.deltaTime;
+			if (AwaitTillUlt < 0.0f)
+				AwaitTillUlt = 0.0f;
+		}
+		if (this.localGamepad.rightStickButton.isPressed && this.localGamepad.rightStickButton.isPressed)
+		{
+			if (this.AwaitTillUlt <= 0.0f)
+			{
+				this.TriggerUlt();
+				this.AwaitTillUlt = this.TimeSpanUlt;
+			}
+		}
+
 	}
 
-
+	public void InitUnit(GameObject go)
+	{
+		if (this.UnitGo != null)
+			Destroy(this.UnitGo);
+		this.UnitGo = go;
+		this.Unit = this.UnitGo.GetComponent<Unit>();
+	}
 
 	private void OnDestroy()
 	{
@@ -107,6 +135,11 @@ public class Player : MonoBehaviour
 	public void TriggerFire()
 	{
 		Debug.Log("projectile here!");
+	}
+
+	public void TriggerUlt()
+	{
+		Debug.Log("ULT!!!!! here!");
 	}
 
 

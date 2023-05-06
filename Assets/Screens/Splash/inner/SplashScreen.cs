@@ -45,7 +45,7 @@ public class SplashScreen : MonoBehaviour, IScreen
 	public void ToHide()
 	{
 		this.gameObject.SetActive(false);
-		this.StateController.OnHide(this);
+		this.StateController.OnHide(this, "");
 	}
 
 	public string getName()

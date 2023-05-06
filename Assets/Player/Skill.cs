@@ -15,10 +15,28 @@ public class Skill
 	public float CountDown;
 	public float LifeTime;
 	public float Power = 1.0f;
+	public float Boost = 1.0f;
 
-	public float CurrentPower => CalcPower();
+	// projectiles only
+	public float Speed = 1.0f;
 
-	private float CalcPower()
+
+	public float RemainCountDown = 0.0f;
+
+
+	public void Update()
+	{
+		if (this.RemainCountDown > 0.0f)
+		{
+			this.RemainCountDown -= Time.deltaTime;
+		}
+		else
+		{
+			this.RemainCountDown = 0.0f;
+		}
+	}
+
+	public float CalcPower()
 	{
 		float res = this.Power;
 
@@ -33,6 +51,23 @@ public class Skill
 		}
 
 		return res;
+	}
+
+
+	public float Use()
+	{
+		float ret = -1.0f;
+
+		if (this.RemainCountDown > 0.0f)
+		{
+			// blocked!
+			return ret;
+		}
+		this.RemainCountDown = this.CountDown;
+
+		ret = this.CalcPower();
+
+		return ret;
 	}
 
 

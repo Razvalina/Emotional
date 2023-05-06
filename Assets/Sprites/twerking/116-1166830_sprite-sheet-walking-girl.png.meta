@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: 2a5efff98d1276d47944ac72388114f8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 617
+        width: 70
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3fdb6feec0c604dbef7e50d57010e1
+      internalID: 351896526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 612
+        width: 75
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8268f680c26ea468e126e87e75fbd0
+      internalID: -1582520331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 612
+        width: 55
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b63814b449d0fa44a277c758b461747
+      internalID: 927982992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_3
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 613
+        width: 51
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd2642eeb827b94b9f0ee453459246a
+      internalID: -1016974945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_4
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 616
+        width: 53
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180696cd7040da24480fb97e13f534ef
+      internalID: 1002624895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_5
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 615
+        width: 60
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18851ac82cc100a47bd6ef481f0dccc2
+      internalID: -426620971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 463
+        width: 66
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ab1e117afdefa4c8bbf0755c5ab6dc
+      internalID: -1139632523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_7
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 462
+        width: 68
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8734b782092bafc47b99a101fc204ddc
+      internalID: -34070116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_8
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 462
+        width: 52
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aecd84563ef38943b8ebdf1f6e3a1cf
+      internalID: -1410797421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_9
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 463
+        width: 51
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7101cdd037a48f44811ad7491c3bc24
+      internalID: -599567841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_10
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 464
+        width: 53
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442ce83312e0bef4093725ff1892eb0f
+      internalID: 782360140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_11
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 464
+        width: 61
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8e555bc12f1124cbb0a269aa921ed2
+      internalID: -814308988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 312
+        width: 49
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb0be7ec83810d42a509ddb44528b3c
+      internalID: 968688112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_13
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 312
+        width: 49
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d7196a2c0702c4d85c1308e49f77b3
+      internalID: -325376939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_14
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 312
+        width: 49
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2c75d887cef2141b8b24e0b4c4ddc4
+      internalID: -418605621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_15
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 312
+        width: 49
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ebae029c245884aa439381325521ff
+      internalID: 952102236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_16
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 311
+        width: 48
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3118dbccac8a94947b4c0c529bd319ac
+      internalID: -2118586001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 311
+        width: 51
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bc2eb6d3f66e24497c67a725e12b61
+      internalID: -1148280190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_18
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 160
+        width: 53
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8670113ef0645db4ebbc75b37f697603
+      internalID: -189155306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_19
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 160
+        width: 60
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e887d32f5e21446b467771cb0d9014
+      internalID: -1411348311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_20
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 161
+        width: 83
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7a623015ddbb340aea2892c7f381bc
+      internalID: -645067354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_21
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 161
+        width: 49
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8a63b4d3dc99848862e071e1b37d8a
+      internalID: -106776658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_22
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 161
+        width: 48
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12eb3162b3225bd43b71612eff7444ee
+      internalID: -380416586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_23
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 161
+        width: 53
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e42ff0f53aad42468d6b14b1a501b08
+      internalID: -899601906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 660
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c8ad9525218084fa36849d588eabb4
+      internalID: -1700899005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 10
+        width: 53
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1170942ae5fa14ca88e5c469805b54
+      internalID: -707233853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 116-1166830_sprite-sheet-walking-girl_26
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 10
+        width: 54
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8911c4eb3d7764cbbc555ff9b12a26
+      internalID: 64352453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      116-1166830_sprite-sheet-walking-girl_0: 351896526
+      116-1166830_sprite-sheet-walking-girl_1: -1582520331
+      116-1166830_sprite-sheet-walking-girl_10: 782360140
+      116-1166830_sprite-sheet-walking-girl_11: -814308988
+      116-1166830_sprite-sheet-walking-girl_12: 968688112
+      116-1166830_sprite-sheet-walking-girl_13: -325376939
+      116-1166830_sprite-sheet-walking-girl_14: -418605621
+      116-1166830_sprite-sheet-walking-girl_15: 952102236
+      116-1166830_sprite-sheet-walking-girl_16: -2118586001
+      116-1166830_sprite-sheet-walking-girl_17: -1148280190
+      116-1166830_sprite-sheet-walking-girl_18: -189155306
+      116-1166830_sprite-sheet-walking-girl_19: -1411348311
+      116-1166830_sprite-sheet-walking-girl_2: 927982992
+      116-1166830_sprite-sheet-walking-girl_20: -645067354
+      116-1166830_sprite-sheet-walking-girl_21: -106776658
+      116-1166830_sprite-sheet-walking-girl_22: -380416586
+      116-1166830_sprite-sheet-walking-girl_23: -899601906
+      116-1166830_sprite-sheet-walking-girl_24: -1700899005
+      116-1166830_sprite-sheet-walking-girl_25: -707233853
+      116-1166830_sprite-sheet-walking-girl_26: 64352453
+      116-1166830_sprite-sheet-walking-girl_3: -1016974945
+      116-1166830_sprite-sheet-walking-girl_4: 1002624895
+      116-1166830_sprite-sheet-walking-girl_5: -426620971
+      116-1166830_sprite-sheet-walking-girl_6: -1139632523
+      116-1166830_sprite-sheet-walking-girl_7: -34070116
+      116-1166830_sprite-sheet-walking-girl_8: -1410797421
+      116-1166830_sprite-sheet-walking-girl_9: -599567841
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

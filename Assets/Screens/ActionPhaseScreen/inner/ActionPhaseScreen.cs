@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class ActionPhaseScreen : MonoBehaviour, IScreen
+public partial class ActionPhaseScreen : MonoBehaviour, IScreen, PlayerActionDelegate
 {
 	StateController StateController = null;
 	public GameObject Player1;
 	public GameObject Player2;
+	public GameObject Camera;
 
 	private Player player1;
 	private Player player2;
@@ -14,41 +15,53 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen
 	public GameObject P1;
 	public GameObject P2;
 
+	float fTimeWave = 5.0f;
+	//List<float> Waves = new List<float>();
+
 	// Update is called once per frame
 	void Update()
 	{
-		this.Place(player1, P1);
-		this.Place(player2, P2);
+		this.fTimeWave -= Time.deltaTime;
+		if (fTimeWave < 0.0f)
+		{
+			fTimeWave = 5.0f;
+			this.Camera.GetComponent<Camera>().orthographicSize += 5.0f;
+
+			Modifier mod = new Modifier();
+			mod.Timer = 99999;
+			mod.Stat.Speed = 1.5f;
+			this.player1.Unit.character.Modifiers.Add(mod);
+
+			Modifier mod2 = new Modifier();
+			mod2.Timer = 99999;
+			mod2.Stat.Speed = 1.5f;
+			this.player2.Unit.character.Modifiers.Add(mod2);
+
+
+			fTimeWave = 5.0f;
+		}
+
+		this.player1.UpdatePlayer();
+		this.player2.UpdatePlayer();
+
 	}
 
-	void Place(Player pl, GameObject go)
+
+	public void onDie(Player pl)
 	{
-		int activeSkill = pl.activeSkill;
-		switch (activeSkill)
-		{
-			case 0:
-				go.GetComponent<SpriteRenderer>().color = Color.white;
-				break;
-			case 1:
-				go.GetComponent<SpriteRenderer>().color = Color.red;
-				break;
-			case 2:
-				go.GetComponent<SpriteRenderer>().color = Color.green;
-				break;
-			case 3:
-				go.GetComponent<SpriteRenderer>().color = Color.blue;
-				break;
-		}
-			
-		if (pl.Offset.magnitude > 0.0f)
-		{
-			go.transform.localPosition += new Vector3(pl.Offset.x, pl.Offset.y, 0.0f );
-		}
-
-		float Angle = Mathf.Atan2(pl.Direction.y, pl.Direction.x) * Mathf.Rad2Deg;
-		bool isRight = (Angle >= -90.0f && Angle <= 90.0f);
-		go.GetComponent<SpriteRenderer>().flipX = !isRight;
+		throw new System.NotImplementedException();
 	}
+
+	public void onFire(Player pl, Skill skill)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public void onUlt(Player pl, Skill skill)
+	{
+		throw new System.NotImplementedException();
+	}
+
 
 
 
@@ -62,11 +75,9 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen
 
 		this.player1 = this.Player1.GetComponent<Player>();
 		this.player2 = this.Player2.GetComponent<Player>();
-		this.player1.SetAdaptiveType(true);
-		this.player2.SetAdaptiveType(false);
+		this.player1.SetAdaptiveType(this.player1.Unit.isDamageDriver);
+		this.player2.SetAdaptiveType(this.player2.Unit.isDamageDriver);
 
-		this.P1 = this.player1.UnitGo.transform.Find("unit").gameObject;
-		this.P2 = this.player2.UnitGo.transform.Find("unit").gameObject;
 	}
 	public void ToHide()
 	{
@@ -83,8 +94,6 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen
 	{
 		return "ActionPhaseScreen";
 	}
-
-
 
 
 }

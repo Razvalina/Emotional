@@ -67,6 +67,11 @@
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_InspectorHelp.cs" />
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\Player\Skill.cs" />
+    <Compile Include="Assets\Units\Unit.cs" />
+    <Compile Include="Assets\Player\Stat.cs" />
+    <Compile Include="Assets\Screens\SelectionScreen\inner\SelectionScreen.cs" />
+    <Compile Include="Assets\Player\Modifier.cs" />
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_ShurikenThreadFix.cs" />
     <Compile Include="Assets\Scripts\IScreen\IScreen.cs" />
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Spawn System\CFX_SpawnSystem.cs" />
@@ -74,7 +79,6 @@
     <Compile Include="Assets\Player\Character.cs" />
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-    <Compile Include="Assets\Scripts\Playertemp.cs" />
     <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Screens\ActionPhaseScreen\inner\ActionPhaseScreen.cs" />
@@ -99,6 +103,7 @@
     <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
     <None Include="Assets\FX\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
     <None Include="Assets\FX\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
+    <None Include="Assets\Parking and Castle\Parking + Cars for parking\Parking_Game\Shaders\SpriteTileShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

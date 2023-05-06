@@ -60,13 +60,14 @@
   <ItemGroup>
     <Compile Include="Assets\Screens\Splash\inner\SplashScreen.cs" />
     <Compile Include="Assets\Screens\LoadingScreen\inner\LoadingScreen.cs" />
+    <Compile Include="Assets\Player\Skill.cs" />
+    <Compile Include="Assets\Units\Unit.cs" />
     <Compile Include="Assets\Player\Stat.cs" />
     <Compile Include="Assets\Screens\SelectionScreen\inner\SelectionScreen.cs" />
     <Compile Include="Assets\Player\Modifier.cs" />
     <Compile Include="Assets\Scripts\IScreen\IScreen.cs" />
     <Compile Include="Assets\StateController.cs" />
     <Compile Include="Assets\Player\Character.cs" />
-    <Compile Include="Assets\Scripts\Playertemp.cs" />
     <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\Screens\ActionPhaseScreen\inner\ActionPhaseScreen.cs" />
     <Compile Include="Assets\Scripts\SCE_pad.cs" />

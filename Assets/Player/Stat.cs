@@ -11,7 +11,7 @@ public class Stat
 	public float HP;
 	public float Speed; //move koef
 	public float Power; // attach power
-	public float DirectionKoef;
+	public float DirectionKoef = 1.0f;
 
 	public void Copy(Stat st)
 	{

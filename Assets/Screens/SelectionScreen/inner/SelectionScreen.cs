@@ -8,6 +8,11 @@ public class SelectionScreen : MonoBehaviour, IScreen
 	public GameObject Player1;
 	public GameObject Player2;
 
+	public GameObject Unit1;
+	public GameObject Unit2;
+	public GameObject Unit3;
+	public GameObject Unit4;
+
 	private Player player1;
 	private Player player2;
 
@@ -28,7 +33,7 @@ public class SelectionScreen : MonoBehaviour, IScreen
 	Color defFrameCol2 = Color.white;
 
 	bool isBlockInput = true;
-	float timoutBeforeLoading = 5.0f;
+	float timoutBeforeLoading = 1.0f;
 
 	public void Start()
 	{
@@ -36,6 +41,7 @@ public class SelectionScreen : MonoBehaviour, IScreen
 		this.FramePlayer2 = this.transform.Find("frame_Player2").gameObject;
 		this.defFrameCol1 = this.FramePlayer1.GetComponent<SpriteRenderer>().color;
 		this.defFrameCol2 = this.FramePlayer2.GetComponent<SpriteRenderer>().color;
+
 	}
 
 	// Update is called once per frame
@@ -43,8 +49,9 @@ public class SelectionScreen : MonoBehaviour, IScreen
 	{
 		if (!this.isBlockInput)
 		{
-			this.ChangeSelectedUser(this.player1, ref this.selectedFrameP1, ref this.isPlayer1Ready, this.defFrameCol1, this.FramePlayer1);
-			this.ChangeSelectedUser(this.player2, ref this.selectedFrameP2, ref this.isPlayer2Ready, this.defFrameCol2, this.FramePlayer2);
+			this.ChangeSelectedUser(this.player1, ref this.selectedFrameP1, ref this.isPlayer1Ready, this.defFrameCol1, this.FramePlayer1, true);
+			this.ChangeSelectedUser(this.player2, ref this.selectedFrameP2, ref this.isPlayer2Ready, this.defFrameCol2, this.FramePlayer2, false);
+
 			if (this.isPlayer1Ready && this.isPlayer2Ready)
 			{
 				isBlockInput = true;
@@ -65,7 +72,7 @@ public class SelectionScreen : MonoBehaviour, IScreen
 
 	}
 
-	private void ChangeSelectedUser( Player player, ref int selectedFrame, ref bool isReady, Color defFrame, GameObject FramePlayer )
+	private void ChangeSelectedUser( Player player, ref int selectedFrame, ref bool isReady, Color defFrame, GameObject FramePlayer, bool isPlayer1 )
 	{
 		// selecting
 		if (player.localGamepad.crossButton.wasReleasedThisFrame)
@@ -93,6 +100,7 @@ public class SelectionScreen : MonoBehaviour, IScreen
 		places[3] = new Vector2(+1.4f, -2.1f);
 
 		// horizontal
+		bool changed = false;
 		if (player.localGamepad.dpad.left.wasReleasedThisFrame || player.localGamepad.dpad.right.wasReleasedThisFrame)
 		{
 			if (selectedFrame == 0)
@@ -103,6 +111,7 @@ public class SelectionScreen : MonoBehaviour, IScreen
 				selectedFrame = 3;
 			else if (selectedFrame == 3)
 				selectedFrame = 2;
+			changed = true;
 		}
 
 		// vertical
@@ -116,11 +125,42 @@ public class SelectionScreen : MonoBehaviour, IScreen
 				selectedFrame = 0;
 			else if (selectedFrame == 3)
 				selectedFrame = 1;
+			changed = true;
 		}
-		FramePlayer.transform.localPosition = places[selectedFrame];
+
+		if (changed)
+		{
+			FramePlayer.transform.localPosition = places[selectedFrame];
+
+			SelectUnit(player, isPlayer1, selectedFrame);
+		}
 
 
 
+	}
+
+	private void SelectUnit(Player player, bool isPlayer1, int selectedFrame)
+	{
+		Vector2 v = new Vector2(-7.0f, -1.7f);
+		if (!isPlayer1)
+			v.x = 7.0f;
+
+		if (selectedFrame == 0)
+		{
+			player.InitUnit(Instantiate(this.Unit1, v, Quaternion.identity));
+		}
+		if (selectedFrame == 1)
+		{
+			player.InitUnit(Instantiate(this.Unit2, v, Quaternion.identity));
+		}
+		if (selectedFrame == 2)
+		{
+			player.InitUnit(Instantiate(this.Unit3, v, Quaternion.identity));
+		}
+		if (selectedFrame == 3)
+		{
+			player.InitUnit(Instantiate(this.Unit4, v, Quaternion.identity));
+		}
 	}
 
 
@@ -133,6 +173,10 @@ public class SelectionScreen : MonoBehaviour, IScreen
 		this.player1 = this.Player1.GetComponent<Player>();
 		this.player2 = this.Player2.GetComponent<Player>();
 
+
+		SelectUnit(this.player1, true, this.selectedFrameP1);
+		SelectUnit(this.player2, false, this.selectedFrameP2);
+
 		this.isBlockInput = false;
 		this.timoutBeforeLoading = 5.0f;
 
@@ -142,7 +186,7 @@ public class SelectionScreen : MonoBehaviour, IScreen
 		if (this.StateController != null)
 		{
 			this.gameObject.SetActive(false);
-			this.StateController.OnHide(this,"");
+			this.StateController.OnHide(this, "LoadingScreen");
 		}
 		this.StateController = null;
 	}

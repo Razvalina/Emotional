@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
 	public Vector2 Offset { get; private set; } = Vector2.zero;
 	public float TimeSpanUlt = 10.0f;
 	public float AwaitTillUlt = 10.0f;
+	
+	public GameObject UnitGo { get; private set; }
+	public Unit Unit { get; private set; }
+
 
 
 	// Start is called before the first frame update
@@ -110,7 +114,13 @@ public class Player : MonoBehaviour
 
 	}
 
-
+	public void InitUnit(GameObject go)
+	{
+		if (this.UnitGo != null)
+			Destroy(this.UnitGo);
+		this.UnitGo = go;
+		this.Unit = this.UnitGo.GetComponent<Unit>();
+	}
 
 	private void OnDestroy()
 	{

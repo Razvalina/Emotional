@@ -12,7 +12,6 @@ public class StateController : MonoBehaviour
         {"none", "SplashScreen" },
 		{"SplashScreen", "LoadingScreen" },
 		{"LoadingScreen", "SelectionScreen" },
-		{"SelectionScreen", "ActionPhaseScreen" },
 		{"ActionPhaseScreen", "DeathScreen" },
 		{"DeathScreen", "ActionPhaseScreen" }
 	};

@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameScene.unity
     guid: 443e85e0b6548e64aae350d0d7d6a579
-  - enabled: 1
+  - enabled: 0
     path: Assets/MainMenu/MainMenuScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/LoadingScene/LoadingScene.unity
     guid: 2a782e5548d3dea498043f5ac3a8cfa2
-  - enabled: 1
+  - enabled: 0
     path: Assets/ActionPhase/ActionPhase.unity
     guid: 31a4e8d515bbc534ba49a6a978edb900
-  - enabled: 1
+  - enabled: 0
     path: Assets/DeathScene/DeathScene.unity
     guid: 53dbbe28e2fbbf240b5d633cdb543398
   - enabled: 1

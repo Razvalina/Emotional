@@ -9,7 +9,7 @@ using static DualshockAdaptive.SCE;
 public class Player : MonoBehaviour
 {
 	public int PlayerID = 0;
-	private Gamepad localGamepad = null;
+	public Gamepad localGamepad { get; private set; } = null;
 
 	// addaptive trigger data
 	private int userId => this.PlayerID + 1;// SCE.SCE_USER_SERVICE_STATIC_USER_ID_1;

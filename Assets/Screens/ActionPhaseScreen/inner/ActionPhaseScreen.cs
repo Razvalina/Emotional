@@ -73,7 +73,7 @@ public partial class ActionPhaseScreen : MonoBehaviour, IScreen
 		if (this.StateController != null)
 		{
 			this.gameObject.SetActive(false);
-			this.StateController.OnHide(this);
+			this.StateController.OnHide(this,"");
 		}
 		this.StateController = null;
 	}

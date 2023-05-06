@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Screens\Splash\inner\SplashScreen.cs" />
     <Compile Include="Assets\Screens\LoadingScreen\inner\LoadingScreen.cs" />
+    <Compile Include="Assets\Screens\SelectionScreen\inner\SelectionScreen.cs" />
     <Compile Include="Assets\Scripts\IScreen\IScreen.cs" />
     <Compile Include="Assets\StateController.cs" />
     <Compile Include="Assets\Player\Character.cs" />
